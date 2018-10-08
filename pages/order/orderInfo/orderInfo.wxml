@@ -1,0 +1,97 @@
+<view class='container'>
+
+
+  <!--收货人信息  -->
+  <view class='consigneeContainer'>
+    <image src='/images/order/orderInfoBG.png' class='consigneeTopImage'></image>
+    <!-- 收货人联系方式电话等信息  -->
+    <view class='consigneeInfo' bindtap='choose_address_again'>
+      <view class='choose_address_before' wx:if="{{choose_address==0}}">
+        <view class='topInfo'>
+          <image class='topPositionImage' src='/images/order/add_address.png'></image>
+          <view class='default_address'>默认</view>
+          <view class='contact'>添加地址</view>
+          <image class='arrow-image' src='/images/order/backArrow.png'></image>
+        </view>
+      </view>
+      <view class='choose_address_after' wx:else="{{choose_address==1}}">
+        <view class='topInfo'>
+          <image class='topPositionImage' src='/images/order/position_center.png'></image>
+          <view class='contact'>{{buy_name}} {{buy_phone_secret}}</view>
+          <image class='arrow-image' src='/images/order/backArrow.png'></image>
+        </view>
+        <view class='bottomInfo'>
+          <view class='address'>地址：</view>
+          <view class='addressInfo'>{{addressInfo}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 购买订单详情  -->
+  <view class='orderContainer'>
+    <image class='order-left' src='{{get_data.small_img}}'></image>
+    <view class='order-middle'>
+      <view class='productName'>{{get_data.product_name}}</view>
+      <view class='color-size' wx:if="{{isSingle==0}}">{{get_data.product_color}}；{{get_data.product_size}}</view>
+      <view class='color-size' wx:else="{{isSingle==1}}">商品规格：默认</view>
+    </view>
+
+    <view class='order-right'>
+      <view class='actual-price'>¥{{get_data.product_real_price}}</view>
+      <view class='actual-number'>x{{product_num}}</view>
+    </view>
+  </view>
+
+  <!-- 价格信息  -->
+  <view class='priceContainer'>
+    <view class='product-sum'>
+      <view class='sum-name'>商品金额</view>
+      <view class='sum-price'>¥{{goods_total_price}}</view>
+    </view>
+
+    <view class='product-sale'>
+      <view class='sale-name'>优惠</view>
+      <view class='sale-price'>-¥{{coupon_ticket}}</view>
+    </view>
+    <view class='product-num'>
+      <view class='sale-name'>购买数量</view>
+      <view class="stepper">
+        <!-- 减号 -->
+        <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+        <!-- 数值 -->
+        <input type="number" bindblur="bindManual" maxlength='5' value="{{product_num}}" />
+        <!-- 加号 -->
+        <text class="normal" bindtap="bindPlus">+</text>
+
+      </view>
+    </view>
+
+    <view class='product-middle-line'></view>
+
+    <view class='product-total'>
+      <view class='total-name'>合计</view>
+      <view class='total-price'>¥{{wxRealPrice}}</view>
+    </view>
+  </view>
+
+  <!-- 应该付款  -->
+  <view class='bottomContainer'>
+    <view class='left-needPay'>应付 ￥{{wxRealPrice}}</view>
+    <view class='right-gotobuy' bindtap='jump_pay_success'>去付款</view>
+  </view>
+
+</view>
+
+<!-- <view class='pop_up_box' wx:if="{{pop_up_box}}">
+  <view class='pop_up_box_small'>
+    <view class='pop_up_title'>
+      免责声明:小程序内测中,请勿下单,敬请谅解!
+    </view>
+    <view class='comfirm_box'>
+      <button class='sure_button' bindtap='sure_button'>确认</button>
+      <button class='cancel_button' bindtap='cancel_button'>取消</button>
+    </view>
+  </view>
+</view> -->

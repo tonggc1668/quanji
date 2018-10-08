@@ -1,0 +1,126 @@
+page{
+  overflow: hidden;
+}
+
+.bgContainer {
+width: 100%;
+height: 100%;
+}
+
+.bgImage {
+width: 100%;
+height: 1338rpx;
+display: block;
+}
+
+.infoComtainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+.topImageCon {
+  width: 170rpx;
+  height: 170rpx;
+  margin:0 auto;
+  margin-top: 192rpx;
+}
+
+.topImage {
+    width: 100%;
+  height: 100%;
+}
+
+.titleInfo {
+  width: 430rpx;
+  height: 90rpx;
+  margin:0 auto;
+  margin-top: 15rpx;
+font-size:32rpx;
+line-height:45rpx;
+color: #333;
+text-align: center;
+}
+
+.topLine {
+  width: 520rpx;
+  height: 8rpx;
+  margin:0 auto;
+  margin-top: 60rpx;
+  border-top: 2rpx solid #CC9E3D;
+  border-bottom: 2rpx solid #CC9E3D;
+}
+
+.middleNoticeInfo {
+  width: 520rpx;
+  height: 260rpx;
+  margin:0 auto;
+}
+
+.letterTop {
+margin-top: 30rpx;
+color: #333;
+width: 100%;
+height: 45rpx;
+line-height: 45rpx;
+}
+
+.letterInfo {
+margin-top: 30rpx;
+color: #999;
+width: 100%;
+}
+
+.letterBottom {
+margin-top: 30rpx;
+color: #333;
+width: 100%;
+height: 45rpx;
+line-height: 45rpx;
+text-align: right;
+}
+
+.bottomLine {
+  width: 520rpx;
+  height: 8rpx;
+  margin:0 auto;
+  border-top: 2rpx solid #CC9E3D;
+  border-bottom: 2rpx solid #CC9E3D;
+}
+
+.sendGiftCon {
+  width: 320rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin:0 auto;
+  margin-top: 115rpx;
+  color: white;
+  background-color: #FF2063;
+  border-radius: 5rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.sendGiftStatus {
+  width: 100%;
+  margin-top: 30rpx;
+font-size: 22rpx;
+color: #777;
+text-align: center;
+}
+
+.backToHome {
+  background-color: #FF2063;
+  font-size: 28rpx;
+  color: white;
+  border-radius: 5rpx;
+  width: 320rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  margin-top: 60rpx;
+  text-align: center;
+  line-height: 80rpx;
+}

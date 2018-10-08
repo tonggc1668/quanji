@@ -1,0 +1,114 @@
+page{
+  background: #F8FAFC;
+}
+.gift_title_img{
+  width:100%;
+  height: 259rpx;
+}
+.gift_title_box>image{
+  display: block;
+  width:170rpx;
+  height: 170rpx;
+  border-radius: 10rpx;
+  margin:0 auto;
+  margin-top:-79rpx;
+}
+.product_name{
+  width:622rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  margin:0 auto;
+  margin-top:15rpx;
+  text-align: center;
+}
+.gift_prompt{
+  width:100%;
+  height: 42rpx;
+  line-height: 42rpx;
+  text-align: center;
+  font-size: 30rpx;
+  margin-top:10rpx;
+}
+.person_box{
+  width:100%;
+  height: auto;
+  margin-top:30rpx;
+}
+.person_list{
+  width:690rpx;
+  height: 140rpx;
+  margin:0 auto;
+  border-radius: 10rpx;
+  background: #fff;
+  margin-bottom: 15rpx;
+  box-shadow:0px 0px 4px 0px rgba(0,0,0,0.1);
+  display: flex;
+  position: relative;
+}
+.userHeadImgSrc{
+  width:80rpx;
+  height: 80rpx;
+  display: block;
+  border-radius: 5rpx;
+  margin-left:30rpx;
+  margin-top:30rpx;
+}
+/* .person_list>image{
+  width:80rpx;
+  height: 80rpx;
+  display: block;
+  border-radius: 5rpx;
+  margin-left:30rpx;
+  margin-top:30rpx;
+} */
+.participant_box{
+  width:340rpx;
+  margin-left:30rpx;
+}
+.participant_name{
+  margin-top:30rpx;
+  font-size: 32rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+}
+.receive_time{
+  line-height: 40rpx;
+  height: 40rpx;
+  color:#777;
+  font-size: 28rpx;
+}
+.gift_status{
+  height: 140rpx;
+  line-height: 140rpx;
+  font-size: 32rpx;
+  color:#777;
+  width:150rpx;
+  text-align: right;
+}
+.is_onesele{
+  width: 102rpx;
+  height: 102rpx;
+  position: absolute;
+  left:231rpx;
+  top:19rpx;
+  z-index: 0;
+}
+.is_onesele>image{
+  width: 102rpx;
+  height: 102rpx;
+  display: block;
+}
+.operate_box>view{
+  width:130rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color:#fff;
+  font-size: 28rpx;
+  margin-top:40rpx;
+}
+.operate_box .go_to_ticket{
+  width:186rpx;
+}

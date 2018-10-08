@@ -1,0 +1,100 @@
+.product_list{
+  width:100%;
+  height:auto;
+}
+.product_list_banner{
+  width:100%;
+  height:320rpx;
+}
+.product_list_banner>image{
+  width:100%;
+  height:100%;
+  display: block;
+}
+.product_list_con{
+  width:100%;
+  height:auto;
+}
+.product_list_title{
+  width:100%;
+  height:105rpx;
+  line-height: 105rpx;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+}
+.product_list_title image{
+  width:16rpx;
+  height:16rpx;
+}
+.product_list_title text{
+  font-size:32rpx;
+  color: #FF2063;
+}
+/* 列表 */
+.you_may_like_box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.you_may_like_list {
+  width: 350rpx;
+  height: 505rpx; 
+  overflow: hidden;
+}
+.you_may_like_list:nth-child(odd){
+  margin-right:10rpx;
+}
+.you_may_like_list:nth-child(even){
+  margin-right: 0;
+}
+
+.you_may_like_list>image {
+  display: block;
+  width: 350rpx;
+  height: 350rpx;
+}
+
+.you_may_like_name {
+  /* display: block; */
+  width: 318rpx;
+  height: 80rpx;
+  line-height: 40rpx;
+  margin: 0 auto;
+  font-size: 28rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: -o-ellipsis-lastline;
+  margin-top:16rpx;
+  margin-bottom:5rpx;
+}
+.price_and_sale{
+  display: block;
+  width:305rpx;
+  height:65rpx;
+  line-height:50rpx;
+  margin:0 auto;
+}
+.price_box{
+  float: left;
+}
+.now_price{
+  font-size:30rpx;
+  color:#FF2063;
+  font-weight: bold;
+}
+.prev_price{
+  font-size:22rpx;
+  color:#CAC9CE;
+  margin-left:10rpx;
+  text-decoration: line-through;
+}
+.have_sale{
+  float:right;
+  font-size:24rpx;
+  color:#CAC9CE;
+}

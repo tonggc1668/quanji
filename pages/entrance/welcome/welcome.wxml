@@ -1,0 +1,12 @@
+<view class='root' style="background-image:url('https://shq-1256131430.cos.ap-guangzhou.myqcloud.com/f962d4948310429e95b68d24dced53b9.png'); background-size:cover" >
+  
+    <view class='shoper_top' bindtap='onShopClick' style="background-image:url('https://shq-1256131430.cos.ap-guangzhou.myqcloud.com/6a353a09bd1c4db58fcc18f9cef74b7a.png'); background-size:cover">
+      <text class='text_one'>成为店主</text>
+      <text class='text_two'>闲暇时间，赚点钱</text>
+    </view>
+
+  <view class='shoper' bindtap='onNormalClick' style=";background-image:url('https://shq-1256131430.cos.ap-guangzhou.myqcloud.com/6a353a09bd1c4db58fcc18f9cef74b7a.png'); background-size:cover">
+    <text class='text_three'>随便看看</text>
+  </view>
+
+</view>

@@ -1,0 +1,57 @@
+.cell-container {
+  height: 120rpx;
+  width: 710rpx;
+  margin: 0 auto;
+  border-bottom: 1rpx solid #f2f2f2;
+  background-color: white;
+}
+
+.left-container {
+  float: left;
+  width: 40%;
+  height: 100%;
+  margin-left: 45rpx;
+}
+
+.right-container {
+  float: right;
+  width: 50%;
+  height: 100%;
+  margin-right: 23rpx;
+
+}
+
+.left-price {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #FF2063;
+  height: 22rpx;
+}
+
+.left-time {
+  font-size: 24rpx;
+  color: #B2B2B2;
+  height: 19rpx;
+  margin-top: 10rpx;
+}
+
+.right-status-wait ,
+.right-status-error,
+.right-status-finish {
+  font-size: 24rpx;
+  line-height: 113rpx;
+  text-align: right;
+}
+
+
+.right-status-wait {
+  color: #FF2063;
+}
+
+.right-status-error {
+  color: #FF2063;
+}
+
+.right-status-finish {
+  color: #B2B2B2;
+}

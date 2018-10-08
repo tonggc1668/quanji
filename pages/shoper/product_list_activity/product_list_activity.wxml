@@ -1,0 +1,48 @@
+<view class='product_list'>
+  <view class='product_list_banner'>
+    <image src='{{category_img}}'></image>
+  </view>
+  <view class='wonderful_group_con'>
+    <view class='swiper_to_slide'>
+      <image src='/images/common/swiper_to_slide.png'></image>
+    </view>
+    <view section section_gap>
+      <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%;overflow-y:hidden;">
+        <view class='wonderful_group_box'>
+          <view class='wonderful_group_list' wx:for="{{specail_add_list}}" wx:key="unique" style="display: block;" bindtap='jump_to_detail_group' data-productgroupId="{{item.id}}">
+            <image src='{{item.mainImgUrl}}'></image>
+            <view class='wonderful_price_box'>
+              <text>¥{{item.groupPrice}}</text>
+              <text>¥{{item.marketPrice}}</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class='product_list_con'>
+    <view class='product_list_title'>
+      <!-- <image src='../../../images/common/quadrilateral.png'></image> -->
+      <text>{{category_title}}</text>
+      <!-- <image src='../../../images/common/quadrilateral.png'></image> -->
+    </view>
+    <view class='you_may_like_box'>
+      <view class='you_may_like_list' wx:for="{{otherArray}}" wx:key="unique" style="display: block;" bindtap="jump_to_detail_group" data-productgroupId="{{item.id}}">
+        <image src='{{item.mainImgUrl}}'></image>
+        <view class='you_may_like_name'>{{item.goodsName}}</view>
+        <view class='price_and_sale'>
+          <view class='price_box'>
+            <text class='now_price'>¥{{item.groupPrice}}</text>
+            <text class='prev_price'>¥{{item.marketPrice}}</text>
+          </view>
+        </view>
+        <view class='group_buy_num'>
+          <view class='group_img_box'>
+            <image src='{{item.imgUrl}}' wx:for="{{item.headImgOfGroupUrlList}}" wx:key="unique" style="display: block;"></image>
+          </view>
+          <view class='have_sale'>{{item.totalNumOfGroup}}人已团</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

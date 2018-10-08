@@ -1,0 +1,22 @@
+<view>
+
+  <view class='order_menu_top' bindtap='shopName'>
+    <text>店铺名称</text>
+    <image src='../../../images/mine/back.png' id='back_image'></image>
+  </view>
+
+
+<!-- 店铺背景图  -->
+  <!-- <view class='order_menu_top' bindtap='shopBg'>
+    <text>店铺背景图</text>
+    <image src='../../../images/mine/back.png' id='back_image'></image>
+  </view> -->
+
+    <view class='order_menu_top' bindtap='shopIcon'>
+    <text>店铺logo</text>
+    <image src='../../../images/mine/back.png' id='back_image'></image>
+
+  </view>
+
+
+</view>

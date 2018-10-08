@@ -1,0 +1,102 @@
+/* 你可能喜欢 */
+@import "../product_list/product_list.wxss";
+/* .you_may_like {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.you_may_like_list {
+  width: 350rpx;
+  height: 500rpx;
+  /* height: 625rpx; */
+/* } */
+
+/* .you_may_like_title {
+  width: 100%;
+  height: 93rpx;
+  line-height: 93rpx;
+  text-align: center; */
+/* } */
+/* 
+.you_may_like_title>image {
+  float: left;
+  display: block;
+  margin-left: 38.5%;
+  margin-top: 32rpx;
+  width: 26rpx;
+  height: 29rpx;
+}
+
+.you_may_like_title>text {
+  /* float: left;
+  display: block; */
+  /* margin-left: 15rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.you_may_like_box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+} */ 
+
+/* .you_may_like_list {
+  width: 50%;
+  border: 1px solid #f2f2f2;
+  border-radius: 5rpx;
+  overflow: hidden;
+  margin-bottom: 1px;
+}
+
+.you_may_like_list>image {
+  display: block;
+  width: 374rpx;
+  height: 374rpx;
+} */
+
+/* .you_may_like_name {
+  width: 286rpx;
+  height: 80rpx;
+  line-height: 40rpx;
+  margin: 0 auto;
+  font-size: 28rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: -o-ellipsis-lastline;
+  margin-top: 20rpx;
+}
+
+.price_and_sale {
+  display: block;
+  width: 305rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  margin: 0 auto;
+}
+
+.price_box {
+  float: left;
+}
+
+.now_price {
+  font-size: 24rpx;
+  color: #FF2063;
+}
+
+.prev_price {
+  font-size: 24rpx;
+  color: #a6a6a6;
+  margin-left: 10rpx;
+  text-decoration: line-through;
+}
+
+.have_sale {
+  float: right;
+  font-size: 24rpx;
+  color: #CAC9CE;
+} */ 

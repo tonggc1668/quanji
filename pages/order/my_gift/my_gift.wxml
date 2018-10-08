@@ -1,0 +1,88 @@
+<!--pages/personal_center/service_order_list/index.wxml-->
+<!--服务订单列表  -->
+<view class='{{isShowModal ? "noscroll" : ""}}'>
+  <view bindtap='handleChangeTab' class='tab'>
+    <view data-index="{{index}}" wx:for='{{tabs}}' wx:key="{{index}}" class='{{item.isActive ? "active" : ""}}'>{{item.text}}</view>
+  </view>
+  <view class='container' wx:if="{{is_empty==0}}">
+    <view class='list' wx:for="{{goods_list}}" wx:key="">
+      <view class='shop_name'>
+        <view class='shop_name_con'>{{item.shop_name}}</view>
+        <view wx:if="{{orderStatus==0}}">
+          <view class='order_status' wx:if="{{item.orderStatus==0}}">{{item.orderStatusName}}</view>
+          <!-- <view class='order_status' wx:elif="{{item.accept==2}}">已转赠</view> -->
+          <view class='order_status' wx:else>{{item.giftStatusName}}</view>
+        </view>
+        <view wx:elif="{{orderStatus==1}}">
+          <view class='order_status' wx:if="{{item.accept==0}}">已领取</view>
+          <view class='order_status' wx:elif="{{item.accept==1}}">已接收</view>
+          <view class='order_status' wx:else>已转赠</view>
+        </view>
+        <view wx:elif="{{orderStatus==2}}">
+          <view wx:if="{{userId==item.creatorId}}">
+            <view class='order_status'>{{item.giftStatusName}}</view>
+          </view>
+          <view wx:else>
+            <view class='order_status' wx:if="{{item.accept==0}}">已领取</view>
+            <view class='order_status' wx:elif="{{item.accept==1}}">已接收</view>
+            <view class='order_status' wx:else>已转赠</view>
+          </view>
+        </view>
+      </view>
+      <view class='product_information_detail' data-id='{{item.goodsId}}' data-shopid='{{item.shopId}}' data-group='{{item.group}}' bindtap='jump_to_detail'>
+        <image src='{{item.goodsImg}}'></image>
+        <view class='product_name_con'>
+          <view class='product_name'>{{item.goodsName}}
+          </view>
+          <view class='buy_goods_information'>
+            <view class='buy_goods_size'>{{item.goodsproperty}}</view>
+            <view class='buy_goods_num'>{{item.goodsSum}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='real_pay_money'>
+        <view class='real_pay_prompt'>实付款：</view>
+        <view class='real_pay_con'>
+          <text>¥</text>
+          <text>{{item.prepayPrice}}</text>
+        </view>
+      </view>
+      <view wx:if="{{orderStatus==0}}">
+        <view class='order_operate_box' wx:if="{{item.orderStatus==0}}">
+          <view class='button_black button_public' data-id="{{item.orderId}}" bindtap='cancel_order'>取消订单</view>
+          <view class='button_red button_public' data-id="{{item.orderId}}" bindtap='pay_again'>立即付款</view>
+        </view>
+        <view class='order_operate_box' wx:elif="{{item.giftStatus==0}}">
+          <view class='button_black button_public' data-id="{{item.orderId}}" bindtap='cancel_order'>取消订单</view>
+          <view class='button_red button_public' data-goodsname="{{item.goodsName}}" data-goodsimg='{{item.goodsImg}}' data-word="{{item.orderGiftWord}}" data-orderid="{{item.order_no}}" bindtap='send_gift'>立即送礼</view>
+        </view>
+        <view class='order_operate_box' wx:elif="{{item.giftStatus==1}}">
+          <view class='button_red button_public' data-id='{{item.goodsId}}' data-shopid='{{item.shopId}}' data-group='{{item.group}}' bindtap='jump_to_detail'>再送一份</view>
+        </view>
+        <view class='order_operate_box' wx:elif="{{item.giftStatus==2}}">
+          <view class='button_black button_public' data-orderid='{{item.orderId}}' bindtap='transportationInfo'>查看物流</view>
+          <view class='button_red button_public' data-id='{{item.goodsId}}' data-shopid='{{item.shopId}}' data-group='{{item.group}}' bindtap='jump_to_detail'>再送一份</view>
+        </view>
+      </view>
+      <view wx:elif="{{orderStatus==1}}">
+        <view class='order_operate_add'>
+          <view class='gift_man'>{{item.inviterName}} 送出</view>
+          <view wx:if="{{item.accept==0}}">
+            <button class='button_red button_public' data-id='{{item.order_no}}' bindtap='receive_gift'>收下礼物</button>
+          </view>
+          <view wx:else>
+            <view class='button_black button_public'  data-orderid='{{item.orderId}}' bindtap='transportationInfo'>查看物流</view>
+            <button class='button_red button_public' open-type='contact'>申请售后</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='empty_order' wx:else="{{is_empty==1}}">
+    <image src='/images/order/order_empty.png'></image>
+    <view class='prompt_con'>当前没有订单</view>
+  </view>
+</view>
+
+<view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+<view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view>

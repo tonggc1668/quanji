@@ -1,0 +1,52 @@
+<view class='root'>
+  <text class='title'>闲暇时间,挣点钱</text>
+  <text class='price'>仅需要<text class='money'>99元</text></text>
+
+  <view class='item'>
+    <view class='title_root'>
+      <text id='title_bg'>零成本开店</text>
+      <text class='item_text'>文案文案需要提供需要提供文案文案需要提供需要.</text>
+    </view>
+
+    <view class='title_root'>
+      <text id='title_bg'>靠谱的货源</text>
+      <text class='item_text'>文案文案需要提供需要提供文案文案需要提供需要.</text>
+    </view>
+  </view>
+
+
+
+  <view class='item'>
+    <view class='title_root'>
+      <text id='title_bg'>高收益</text>
+      <text class='item_text'>文案文案需要提供需要提供文案文案需要提供需要.</text>
+    </view>
+
+    <view class='title_root'>
+      <text id='title_bg'>全套运营培训</text>
+      <text class='item_text'>文案文案需要提供需要提供文案文案需要提供需要.</text>
+    </view>
+
+
+   
+  </view>
+
+
+
+ <text class='text'>马上成为店主</text>
+
+
+<view class='input'>
+  <input type="number" placeholder="手机号，收益提现必用" bindinput="listenerPhoneInput"/>
+</view>
+
+
+<view class='input'>
+  <input type='text' placeholder="微信号，培训指导必用" bindinput="listenerWeixinInput"/>
+</view>
+
+<view class='button_root' bindtap="listenerNext">
+  <button class='button'>提交申请</button>
+</view>
+
+</view>

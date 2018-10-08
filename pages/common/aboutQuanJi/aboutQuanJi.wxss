@@ -1,0 +1,131 @@
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  margin-top: 1px;
+  width: 100%;
+ background-color: #F8FAFC;
+}
+
+.topContainer, .bottomIntroduceContainer {
+  width: 216rpx;
+  height: 50rpx;
+  margin: 0 auto;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.topContainer {
+  margin-top: 55rpx;
+}
+
+.bottomIntroduceContainer {
+  margin-top: 30rpx;
+}
+
+.topRedPortLeft, .topRedPortRight {
+  display: block;
+  width: 16rpx;
+  height: 16rpx;
+  float: left;
+  margin-top: 14rpx;
+}
+
+.topTitle {
+  width: 128rpx;
+  line-height: 45rpx;
+  font-size: 32rpx;
+  float: left;
+  margin-left: 20rpx;
+  margin-right: 15rpx;
+  text-align: center;
+}
+
+.topRedPortRight {
+  margin-right: 0rpx;
+}
+
+.middleContainer {
+  display: block;
+  width: 710rpx;
+  height: 336rpx;
+  margin: 0 auto;
+  margin-top: 40rpx;
+  font-size: 24rpx;
+  color: #737373;
+  line-height: 48rpx;
+}
+
+.firstLineIntroduce, .secLineIntroduce {
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  margin-top: 65rpx;
+}
+
+.topFirst, .topSec, .topThird, .bottomFirst {
+  flex: 1;
+  height: 140rpx;
+}
+
+
+.scrollview {
+/* height: 1150rpx; */
+width: 100%;
+}
+
+
+.advanceConTypeShadow {
+  height: 270rpx;
+  width: 690rpx;
+  margin-left: 30rpx;
+  box-shadow: 0px 0px 6px rgba(55,116,217,0.1);
+}
+
+
+.advanceCon {
+  height: 270rpx;
+  width: 690rpx;
+  margin-left: 30rpx;
+}
+
+.imageCon {
+  float: left;
+  width: 255rpx;
+  height: 270rpx;
+}
+
+.introduceImage {
+  width: 84rpx;
+  height: 84rpx;
+  margin: 0 auto;
+  margin-left: 94rpx;
+  margin-top: 94rpx;
+}
+
+.introduceCon {
+  float: left;
+  width: 435rpx;
+  height: 270rpx;
+}
+
+.introduceTitle {
+  display: block;
+  height: 30rpx;
+  width: 450rpx;
+  color: #2e2e2e;
+  font-size: 30rpx;
+  margin-top: 50rpx;
+}
+
+.introduceDetail {
+  display: block;
+  height: 108rpx;
+  width: 420rpx;
+  color: #7b7b7b;
+  font-size: 26rpx;
+  margin-top: 32rpx;
+}

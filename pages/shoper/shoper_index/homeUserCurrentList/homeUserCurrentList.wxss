@@ -1,0 +1,47 @@
+.list-container {
+  display: flex;
+  flex-direction: column;
+background: yellow;
+width: 240;
+}
+
+.topRankImage {
+width: 40rpx;
+height: 40rpx;
+margin-top: 22rpx;
+margin-left: 15rpx;
+}
+
+.backImage {
+width: 230rpx;
+height: 230rpx;
+margin-top: 0rpx;
+margin-left: 5rpx;
+}
+
+.titleText {
+  width: 170rpx;
+  height: 40rpx;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.highPriceText {
+margin-bottom: 10rpx;
+width: 60rpx;
+  height: 40rpx;
+  font-size: 14px;
+  color: "#FC003E";
+  margin-left: 60rpx;
+}
+
+.lowerPriceText {
+margin-bottom: 10rpx;
+width: 60rpx;
+  height: 40rpx;
+  font-size: 14px;
+  color: "#A6A6A6";
+  margin-left: 10rpx;
+}

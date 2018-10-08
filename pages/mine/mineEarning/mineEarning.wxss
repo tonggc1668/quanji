@@ -1,0 +1,159 @@
+/*
+ * .topContainer: top Info & some jump tags 
+  */
+
+.topContainer {
+  width: 100%;
+  height: 410rpx;
+}
+
+.topInfoCon {
+  width: 100%;
+  height: 240rpx;
+  margin-top: 70rpx;
+  position: relative;
+}
+
+.historyEarningCon {
+  width: 100%;
+  height: 240rpx;
+}
+
+.historyEarningTitle {
+  color: #a2a6b1;
+  width: 156rpx;
+  height: 37rpx;
+  font-size: 26rpx;
+  line-height: 37rpx;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.historyEarningCount {
+  color: #ff1f62;
+  width: 100%;
+  height: 140rpx;
+  font-size: 120rpx;
+  line-height: 140rpx;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.tagsCon {
+  position: absolute;
+  width: 158rpx;
+  height: 310rpx;
+  top: -7rpx;
+  right: 0rpx;
+}
+
+.backToMineInfo {
+  width: 158rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+  background-color: #ff2063;
+  color: white;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.drawCrash {
+  margin-top: 30rpx;
+  margin-left: 40rpx;
+  width: 118rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+  background-color: #373c43;
+  color: white;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.detailCon {
+  width: 100%;
+  height: 100rpx;
+}
+
+.salesCountCon, .orderNumCon {
+  height: 100rpx;
+  width: 50%;
+  float: left;
+}
+
+.detailTitle {
+  font-size: 24rpx;
+  color: #a2a6b1;
+  text-align: center;
+}
+
+.detailNum {
+  font-size: 36rpx;
+  color: #373c43;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/*
+* bottomContainer 
+*/
+
+.bottomContainer {
+
+}
+
+.changeData {
+  height: 50rpx;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  font-size: 24rpx;
+  color: #373C43;
+}
+
+.titleCon {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+width: 50rpx;
+height: 50rpx;
+line-height: 16rpx;
+margin: 0 auto;
+text-align: center;
+}
+
+.title-selected {
+  border-bottom: 2px solid #FF1F62;
+  color: #FF1F62;
+}
+
+.ecContainer{
+ /* position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+display: flex;
+flex-direction: column;
+box-sizing: border-box;
+background-color: "#F8FAFC";
+height: 310px;
+/* width: 306px; */
+width:100%;
+margin: 0 auto;
+}
+
+ec-canvas {
+width: 100%;
+height: 310px;
+background-color: "#F8FAFC"
+}

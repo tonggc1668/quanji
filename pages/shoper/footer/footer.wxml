@@ -1,0 +1,16 @@
+<view class="footer_box">
+  <view class='footer_list'  bindtap="jump_index">
+    <block  wx:if="{{condition_active}}">
+      <image src='../../../images/common/home_select.png'  class='footer_list_icon'></image>
+      <text class='footer_list_active'>首页</text>
+    </block>
+    <block  wx:if="{{condition}}">
+      <image src='../../../images/common/mine_normal.png'  class='footer_list_icon'></image>
+      <text>首页</text>
+    </block>
+  </view>
+  <view class='footer_list'   bindtap="jump_my">
+    <image src='../../../images/common/mine_normal.png'  class='footer_list_icon'></image>
+    <text>我的</text>
+  </view>
+</view>

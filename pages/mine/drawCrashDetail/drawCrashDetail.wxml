@@ -1,0 +1,34 @@
+<view class='crashToastBG'>
+  <view class='crashToast'>
+
+    <view class='toast-top-con'>
+      <view class='toastTopLeft'>提现至</view>
+      <view class='toastTopRight'>
+        <view class='toastTopRightTitle'>微信钱包</view>
+        <view class='toastTopRightDetail'>到账时间3-5个工作日，节假日顺延</view>
+      </view>
+    </view>
+
+    <view class='toast-bottom'>
+      <view class='bottom-title'>提现金额</view>
+
+      <view class='bottom-input-con'>
+        <view class='input-unit'>¥</view>
+        <input bindinput='dealWithInput' class='input-num' value="{{inputText}}" type='digit'></input>
+      </view>
+
+
+      <view class='bottom-line'></view>
+
+      <view class='toast-detail-con'>
+        <text class='allmoney-number'>零钱余额 ¥{{        drawCrashCount}}，</text>
+        <text bindtap='drawCrashAlClick' class='allmoney-notice'>全部提现</text>
+      </view>
+
+      <button type="button" class='bottom-button {{buttonState}}' catchtap="drawCrashBtnClick" disabled="{{drawCrashBtnDisable}}">提现</button>
+
+
+    </view>
+
+  </view>
+</view>

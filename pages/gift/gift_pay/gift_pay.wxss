@@ -1,0 +1,212 @@
+@import '/pages/order/my_gift/my_gift'; 
+page{
+  background: #fff;
+}
+.pay_prompt{
+  width:100%;
+  line-height: 33rpx;
+  padding:23rpx 66rpx;
+  background: #F9F5EC;
+  font-size: 28rpx;
+  color:#D6B165;
+}
+.product_information{
+  width:100%;
+  padding:60rpx;
+}
+.product_information_detail{
+  padding:0;
+  background: #fff;
+}
+.product_name_con{
+  width:420rpx;
+}
+.product_name{
+  font-size: 32rpx;
+}
+.buy_goods_size{
+  font-size: 24rpx;
+}
+.give_gift_num{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  height: 57rpx;
+  line-height: 57rpx;
+  margin-top:30rpx;
+}
+.give_gift_title{
+  font-size: 26rpx;
+  color:#777;
+}
+.operate_box{
+  display: flex;
+  width:152rpx;
+  height: 57rpx;
+  border:1rpx solid #E9E9E9;
+}
+.operate_box>view{
+  width:46rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color:#333;
+}
+.operate_box>input{
+  display: block;
+  width: 60rpx;
+  height: 55rpx !important;
+  line-height: 55rpx;
+  color:#333;
+  text-align: center;
+  font-size: 28rpx;
+}
+.gift_words{
+  width:630rpx;
+  height: 275rpx;
+  margin:0 auto;
+  background: #F8F8F8;
+  border:1px solid #E9E9E9;
+}
+.gift_words>textarea{
+  width:560rpx;
+  line-height: 40rpx;
+  display: block;
+  margin:0 auto;
+  margin-top:30rpx;
+  font-size: 26rpx;
+  color:#777;
+  height: 160rpx;
+}
+.words_length{
+  display: flex;
+  width:560rpx;
+  justify-content: space-between;
+  margin:0 auto;
+  height: 56rpx;
+}
+.words_length_num{
+  font-size: 24rpx;
+  color:#bbb;
+  height: 56rpx;
+  line-height: 56rpx;
+}
+.change_one{
+  width:140rpx;
+  height: 56rpx;
+  border:1px solid #E3CD9C;
+  line-height: 53rpx;
+  text-align: center;
+  color:#CC9E3D;
+  font-size: 24rpx;
+}
+.pay_price_box{
+  width:100%;
+  height: 98rpx;
+  display: flex;
+  justify-content: space-between;
+  line-height: 98rpx;
+  position: fixed;
+  bottom:0;
+  left:0;
+}
+.pay_price_real{
+  width:220rpx;
+  color:#FF2063;
+  font-size: 40rpx;
+  text-align: center;
+  font-weight: bold;
+}
+.pay_order{
+  width:220rpx;
+  height: 98rpx;
+  background: #FF588A;
+  font-size: 32rpx;
+  color:#fff;
+  text-align: center;
+}
+/* 新增送礼方式 */
+.send_way_box{
+  display: flex;
+}
+.send_way_box input{
+  display: block;
+  border:1rpx solid #ddd;
+}
+.send_way_box image{
+  width: 36rpx;
+  height: 36rpx;
+  display: block;
+  margin-top:10.5rpx;
+}
+.send_way_box view{
+  font-size: 26rpx;
+  float:left;
+}
+.send_way_box picker{
+  display: flex;
+}
+.send_way_box .input_num{
+  font-size: 28rpx;
+  color:#777;
+}
+/* 输入人数的弹框 */
+.draw_a_lottery{
+  width:100%;
+  height: 100%;
+  background: rgba(0,0,0,0.25);
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 99;
+}
+.draw_a_lottery_box{
+  width:540rpx;
+  height: 342rpx;
+  background: #fff;
+  border-radius: 25rpx;
+  margin:0 auto;
+  margin-top:400rpx;
+}
+.lottery_title{
+  height: 130rpx;
+  line-height: 130rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+.draw_a_lottery_box>input{
+  display: block;
+  width:460rpx;
+  height: 84rpx;
+  border:1rpx solid #DDD;
+  margin:0 auto;
+  border-radius: 5rpx;
+  padding-left:10rpx;
+  box-sizing: border-box;
+}
+.sure_and_cancel{
+  width:460rpx;
+  height: 78rpx;
+  margin:0 auto;  
+  margin-top:30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.sure_and_cancel>view{
+  width: 218rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  text-align: center;
+  border:1rpx solid #979797;
+  border-radius: 39rpx;
+  color:#aaa;
+}
+.sure_and_cancel .sure_num{
+  border:0;
+  color:#fff;
+}
+.gift_words>wx-textarea{
+  position: static;
+  z-index: 1;
+}

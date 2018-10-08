@@ -1,0 +1,100 @@
+
+  <view class='container'>
+
+<view class='userinfo_root'>
+<image wx:if="{{userInfo && userInfo.avatarUrl}}" class='userinfo-avatar' src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+
+<view class='view_change_root'>
+  <text class='text'>{{userInfo.nickName}}</text>
+  <view id='view_change' bindtap='onChange'>
+    <image src='../../images/mine/change.png' class='order_image' ></image>
+
+     <text>切换成店主</text>
+  </view>
+ 
+</view>
+
+
+
+</view>
+
+<view class='order_root'>
+  <view class='order_item' bindtap='allOrder'>
+      <image src='../../images/home/order.png' class='order_image'></image>
+    <text>我的拼团</text>
+  </view>
+
+  <view class='order_item' bindtap='waitPay'>
+      <image src='../../images/home/order.png' class='order_image'></image>
+    <text>签到</text>
+  </view>
+
+   <view class='order_item' bindtap='waitSend'>
+    <image src='../../images/home/order.png' class='order_image'></image>
+    <text>优惠券</text>
+  </view>
+
+  <view class='order_item' bindtap='waitGet'>
+      <image src='../../images/home/order.png' class='order_image'></image>
+    <text>收藏夹</text>
+  </view>
+
+</view>
+
+
+<view class='order_menu' bindtap='myOrder'>
+  <text class='left'>我的订单</text>
+  <image src='../../images/home/back.png' id='back_image' ></image>
+
+</view>
+
+<view class='order_root'>
+  <view class='order_item' bindtap='waitPay'>
+      <image src='../../images/home/order.png' class='order_image'></image>
+    <text>待付款</text>
+  </view>
+
+  <view class='order_item' bindtap='waitSend'>
+      <image src='../../images/home/order.png' class='order_image'></image>
+    <text>待发货</text>
+  </view>
+
+   <view class='order_item' bindtap='waitGet'>
+    <image src='../../images/home/order.png' class='order_image'></image>
+    <text>待收货</text>
+  </view>
+
+  <view class='order_item' bindtap='waitEvaluate'>
+      <image src='../../images/home/order.png' class='order_image'></image>
+    <text>待评价</text>
+  </view>
+
+  <view class='order_item' bindtap='waitEvaluate'>
+      <image src='../../images/home/order.png' class='order_image'></image>
+    <text>退货/售后</text>
+  </view>
+</view>
+
+
+
+
+<view class='myinfo_item'>
+<view>
+  <text>联系客服</text>
+  <contact-button type='default-light' session-from='weapp'></contact-button>
+</view>
+
+</view>
+
+
+
+<view class='myinfo_item' bindtap='selectAddress'>
+  <text>收货地址</text>
+</view>
+
+
+<view class='myinfo_item'>
+  <text>意见反馈</text>
+</view>
+
+</view>

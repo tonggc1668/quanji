@@ -1,0 +1,139 @@
+@import "/pages/order/mineOrderTemplate/mineOrderTemplate.wxss";
+@import "/pages/shoper/yourLikerTemplate/yourLikerTemplate.wxss";
+@import "../../order/groupNull/groupNull.wxss";
+
+page {
+  width: 100%;
+  height: 100%;
+  background: #F7F7F7;
+}
+
+.view_box {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.swiper-tab {
+  height: 80rpx;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  background-color: #F7F7F7;
+  font-size: 28rpx;
+  white-space: nowrap;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.swiper-tab-list {
+  color: #FF2063;
+  font-size: 30rpx;
+  display: inline-block;
+  width: 20%;
+  height: 80rpx;
+  line-height: 80rpx;
+  box-sizing: border-box;
+}
+
+.on {
+background-color: #FF2063;
+color: white;
+font-size: 32rpx;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+}
+
+.scoll-h {
+  height: 100%;
+  width: 100%;
+  background-color: #f2f2f2;
+  margin-top: 80rpx;
+}
+
+.loading{  
+  padding: 10rpx;  
+  text-align: center;  
+}  
+.loading:before{  
+  display: inline-block;  
+  margin-right: 5rpx;  
+  vertical-align: middle;  
+  content: '';  
+  width: 40rpx;  
+  height: 40rpx;  
+  /* background: url("../../../images/mine/loading.png") no-repeat;   */
+  background-size: contain;  
+  animation: rotate 1s linear infinite;  
+}  
+.loading.complete:before{  
+  display: none;  
+}
+
+/* 弹窗 */
+.bgShadow {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.toastContainer {
+  width: 670rpx;
+  height: 370rpx;
+  border-radius: 16rpx;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 432rpx;
+}
+
+.toastTop {
+  width: 100%;
+  height: 150rpx;
+  text-align: center;
+  color: #333;
+  font-size: 32rpx;
+  padding-top: 118rpx;
+}
+
+.toastBottom {
+  width: 100%;
+  height: 98rpx;
+  text-align: center;
+  font-size: 32rpx;
+  border-top: 1rpx solid #eee;
+  margin-top: 122rpx;
+}
+
+.toastBottomLeft {
+  float: left;
+  width: 50%;
+  height: 100%;
+  line-height: 98rpx;
+  text-align: center;
+  color: #ff2063;
+  font-size: 32rpx;
+}
+
+.toastBottomRight {
+  float: right;
+  width: 50%;
+  height: 100%;
+  line-height: 98rpx;
+  text-align: center;
+  color: #333;
+  font-size: 32rpx;
+  border-left: 1rpx solid #eee;
+}

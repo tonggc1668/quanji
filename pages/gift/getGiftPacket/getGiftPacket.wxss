@@ -1,0 +1,116 @@
+page {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: hidden;
+}
+
+.packetCon {
+  display: block;
+  margin: 0 auto;
+  margin-top: 187rpx;
+  width: 658rpx;
+  height: 876rpx;
+  overflow: hidden;
+}
+
+.packetInnerCon {
+  margin: 0 auto;
+  margin-top: 187rpx;
+  width: 658rpx;
+  height: 876rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.iconPicCon {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  margin-top: 80rpx;
+}
+
+.iconPic {
+  width: 100%;
+  height: 100%;
+}
+
+.senderName {
+  width: 300rpx;
+  height: 50rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  text-align: center;
+  color: #ffe2b1;
+  font-size: 36rpx;
+}
+
+.sendTitle {
+  width: 100%;
+  height: 40rpx;
+  margin-top: 6rpx;
+  text-align: center;
+  color: #f7c79b;
+  font-size: 28rpx;
+}
+
+.sendInfo {
+  width: 580rpx;
+  height: 104rpx;
+  line-height: 52rpx;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  text-align: center;
+  color: #ffe2b1;
+  font-size: 44rpx;
+  /* 
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+overflow: hidden; */
+}
+
+.getButton {
+  width: 182rpx;
+  height: 182rpx;
+  line-height: 182rpx;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 45rpx;
+  color: white;
+  background: transparent;
+  position: static;
+}
+
+.cancleCon {
+  position: fixed;
+  top: 223rpx;
+  left: 84rpx;
+  width: 30rpx;
+  height: 30rpx;
+  z-index: 99;
+}
+
+.backIcon {
+  width: 100%;
+  height: 100%;
+}
+.receive_gift{
+  width:208rpx;
+  height: 208rpx;
+  display: block;
+  margin:0 auto;
+  z-index: 0;
+  margin-top:40rpx;
+}
+.look_gift_detail{
+  position: absolute;
+  bottom:30rpx;
+  left:0;
+  width:100%;
+  height:40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #FFE2B1;
+  text-align: center;
+}

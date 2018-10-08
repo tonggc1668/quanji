@@ -1,0 +1,22 @@
+<view class='bgContainer'>
+  <image class='bgImage' src="{{bgImageURL}}" background-size="contain">
+  </image>
+</view>
+
+<view class='infoComtainer'>
+  <view class='topImageCon'>
+  <image class='topImage' src='{{iconImage}}'></image></view>
+
+  <view class='titleInfo'>{{goodsName}}</view>
+
+  <view class='topLine'></view>
+  <view class='middleNoticeInfo'>
+    <view class='letterTop'>Dear</view>
+<view class='letterInfo'>{{inputText}}</view>
+    <view class='letterBottom'>By {{nickName}}</view>
+  </view>
+  <view class='bottomLine'></view>
+
+  <button  class='sendGiftCon' open-type="share">立即送礼</button>
+
+</view>

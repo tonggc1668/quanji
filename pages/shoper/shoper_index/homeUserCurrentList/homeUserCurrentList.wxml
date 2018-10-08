@@ -1,0 +1,9 @@
+<template name="homeUserCurrentLIst">
+  <view class='list-container'>
+    <image class='topRankImage' src='{{curentNoNumber}}'></image>
+    <image class='backImage' src="{{backImage}}"></image>
+    <text class='titleText'>{{title}}</text>
+    <text class='highPriceText'>{{highPrice}}</text>
+    <text class='lowerPriceText'>{{lowerPrcice}}</text>
+  </view>
+</template>

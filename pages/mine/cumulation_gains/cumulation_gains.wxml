@@ -1,0 +1,35 @@
+<view class="total_gains_box">
+  <view class='total_gains_list'>
+    <view class='total_gains_list_box'>今日收益(元)</view>
+    <view class='total_gains_price'>{{todayIncome}}</view>
+  </view>
+  <view class='total_gains_list'>
+    <view class='total_gains_list_box'>累计收益(元)</view>
+    <view class='total_gains_price'>{{historyIncome}}</view>
+  </view>
+</view>
+<!-- 收益记录 -->
+<view class='gains_record'>
+
+  <view class='gains_record_title'  bindtap='showDetail'>
+    <view class='recordChildTitle'>收益记录</view>
+    <image class='first-arrow' src='{{arrowImageSrc}}'></image>
+  </view>
+
+  <view   wx:if='{{isShowDetail}}' class='gains_record_box'>
+    <view class='gains_record_list' wx:for="{{objectArray}}" wx:key="unique">
+      <view class='gains_record_money'>
+        <view class='gains_record_money_box'>
+          ¥{{item.incomePrice}}
+        </view>
+        <view class='gains_record_time'>
+          {{item.incomeTime}}
+        </view>
+      </view>
+      <view catchtap='gotoOrderDetail' data-sellerid='{{item.sellerId}}' data-goodsid='{{item.orderId}}' data-orderstatus='{{item.ordersStatus}}' class='look_for_gains'>查看订单</view>
+    </view>
+
+    <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+    <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view>
+  </view>
+</view>

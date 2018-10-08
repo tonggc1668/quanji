@@ -1,0 +1,8 @@
+<view class='container'>
+<view class='topImageCon' >
+ <image class='topImage' src="{{backImageUrl}}" background-size="cover"></image> 
+</view>
+
+<view class='bottomButton' bindtap='jumpToHomePage'>立即挑选</view>
+
+</view>

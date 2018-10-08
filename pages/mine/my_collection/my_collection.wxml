@@ -1,0 +1,35 @@
+<view class="container">
+
+  <include wx:if="{{is_show_empty}}" src="/pages/mine/collectionNull/collectionNull" />
+
+  <view class="collection_list" data-index="{{item.id}}" bindtouchstart="touchstart" bindtouchmove="touchmove" catchtap='clickEachItem' wx:for="{{items}}" wx:key="" wx:if="{{is_show_collection}}" data-group="{{item.isGroup}}">
+    <view class="content">
+      <view class='collection_img'>
+        <image src='{{item.mainImgUrl}}'></image>
+      </view>
+      <view class='collection_con_box'>
+        <view class='collection_con'>
+          <view class='collection_title'>
+            {{item.goodsName}}
+          </view>
+          <view class='collection_price'>
+            ¥{{item.goodsPrice}}
+          </view>
+        </view>
+        <view class='sale_num'>
+          已售{{item.salesVolume}}
+        </view>
+      </view>
+    </view>
+    <view class='del' catchtap="del" data-id="{{item.id}}" data-indextwo="{{index}}">
+      取消收藏
+    </view>
+    <!-- <view class="del" catchtap="del" data-index="{{item.id}}" data-id="{{item.id}}"  data-indextwo='{{index}}'>
+      <image src="/images/mine/click_delete_collection.png"></image>
+      <view>删除</view>
+    </view>  -->
+  </view>
+
+  <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+  <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view>
+</view>

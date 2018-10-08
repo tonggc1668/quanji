@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #999;
+}
+
+.top-tab {
+  width: 100%;
+  height: 40rpx;
+  background-color: red;
+}
+
+.top-imageShow {
+  width: 100%;
+  height: 374rpx;
+}
+
+.top-shopInfo {
+  flex-direction: row;
+  position: relative; 
+  width: 100%;
+  height: 130rpx;
+}
+
+.shopInfo-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 5rpx;
+  margin-left: 20rpx;
+  margin-top: -30rpx;
+}
+
+.shopInfo-name {
+  position: absolute; 
+  font-size: 16px;
+  color: #333;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  width: 300rpx;
+  height: 44rpx;
+}
+
+.shopInfo-all {
+  position: absolute; 
+  font-size: 12px;
+  color: #999;
+  margin-top: 68rpx;
+  margin-left: 10rpx;
+  width: 120rpx;
+  height: 34rpx;
+}
+
+.shopInfo-number {
+  position: absolute; 
+  font-size: 12px;
+  color: #333;
+  margin-top: 68rpx;
+  margin-left: 120rpx;
+  width: 100rpx;
+  height: 34rpx;
+}
+
+.shopInfo-shareCon {
+  float: right;
+  border: 1px red solid;
+  margin-right: 20rpx;
+  width: 130rpx;
+  height: 50rpx;
+  border-radius: 100rpx;
+  margin-top: 48rpx;
+}

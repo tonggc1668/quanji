@@ -1,0 +1,23 @@
+<template name="couponListCell">
+  <view class='couponListContainer' style="background-image:url('https://items-1255492638.cos.ap-guangzhou.myqcloud.com/677f3503761c4986811fb36ffb36b765.png');background-size:710rpx 200rpx">
+
+    <view class='topContainer'>
+      <view class='topLeftContainer'>
+        <view class='money'>R M B</view>
+        <view class='moneyCount'>{{denomination}}</view>
+      </view>
+
+      <view class='topRightContainer'>
+        <view class='topRightFirstCon'>
+          <view class='topRightType'>单品</view>
+          <view class='topRightIntroduce'>优惠券</view>
+        </view>
+        <view class='topRightUse'>仅限此商品使用</view>
+        <view class='topRightTime'>领取后48小时内有效</view>
+      </view>
+    </view>
+
+    <view class='bottomContainer'>到期时间:{{expireTimeStr}}</view>
+
+  </view>
+</template>

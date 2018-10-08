@@ -1,0 +1,90 @@
+<!-- <view class='container'> -->
+
+  <!-- <scroll-view scroll-y class='scrollview'> -->
+
+    <view class='bottomIntroduceContainer'>
+      <image class='topRedPortLeft' src='/images/about/redPort.png'></image>
+      <text class='topTitle'>圈集优势</text>
+      <image class='topRedPortRight' src='/images/about/redPort.png'></image>
+    </view>
+
+    <view class='advanceConTypeShadow'>
+      <view class='imageCon'>
+        <image class='introduceImage' src='/images/about/aboutCompanyFirst.png'></image>
+      </view>
+      <view class='introduceCon'>
+        <text class='introduceTitle'>源头直采 正品保障</text>
+        <text class='introduceDetail'>圈集采用自营＋品牌直供的模式，与数万源头品牌合作，严格品控，店主无需囤货即可坐拥上亿库存</text>
+      </view>
+    </view>
+
+
+    <view class='advanceCon'>
+      <view class='imageCon'>
+        <image class='introduceImage' src='/images/about/aboutCompanySec.png'></image>
+      </view>
+      <view class='introduceCon'>
+        <text class='introduceTitle'>无中间环节 实现最优价格</text>
+        <text class='introduceDetail'>依托大量的用户支持和丰厚的订单,形成聚合性需求的模式创新，砍掉诸多中间环节，保证质优低价。</text>
+      </view>
+    </view>
+
+    <view class='advanceConTypeShadow'>
+      <view class='imageCon'>
+        <image class='introduceImage' src='/images/about/aboutCompanyThird.png'></image>
+      </view>
+      <view class='introduceCon'>
+        <text class='introduceTitle'>闲暇时间 分享赚钱</text>
+        <text class='introduceDetail'>店主通过分享商品赚取优厚佣金。一部手机，即可坐拥一座商城，轻松赚钱</text>
+      </view>
+    </view>
+
+
+    <view class='advanceCon'>
+      <view class='imageCon'>
+        <image class='introduceImage' src='/images/about/aboutCompanyFiv.png'></image>
+      </view>
+      <view class='introduceCon'>
+        <text class='introduceTitle'>智能高效 仓储系统</text>
+        <text class='introduceDetail'>圈集依托强大的供应链，拥有庞大的仓储物流系统，可满足日均数十万订单的处理</text>
+      </view>
+    </view>
+
+    <view class='advanceConTypeShadow'>
+      <view class='imageCon'>
+        <image class='introduceImage' src='/images/about/aboutCompanySixth.png'></image>
+      </view>
+      <view class='introduceCon'>
+        <text class='introduceTitle'>精选优品 品类齐全</text>
+        <text class='introduceDetail'>坚持精选优品，为您提供好口碑、高评价商品。品类齐全，一站购齐，让您享受购物，省事又省心。</text>
+      </view>
+    </view>
+
+
+    <view class='advanceCon'>
+      <view class='imageCon'>
+        <image class='introduceImage' src='/images/about/aboutCompanyFouth.png'></image>
+      </view>
+      <view class='introduceCon'>
+        <text class='introduceTitle'>全方位指导培训</text>
+        <text class='introduceDetail'>从新手小白到社群大咖，全程提供指导和培训，传授实用干货，助您从零开始，轻松创业</text>
+      </view>
+    </view>
+
+
+    <view class='topContainer'>
+      <image class='topRedPortLeft' src='/images/about/redPort.png'></image>
+      <text class='topTitle'>圈集简介</text>
+      <image class='topRedPortRight' src='/images/about/redPort.png'></image>
+    </view>
+
+    <text class='middleContainer' decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;圈集小店是杭州圈集信息技术有限公司旗下精心打造的社交零售平台。也是基于微信生态圈的新型电商模式。
+  &nbsp;&nbsp;&nbsp;&nbsp;圈集将“自用省钱，分享赚钱”的理念融入电商运营中：用户在申请成为店主后，通过分享商品促成购买，即可获取相应佣金。作为一款手机开店的小程序，圈集通过云端资源的共享，提供商品、物流、IT、培训、售后等全体系服务，让普通人能够轻松开展网上零售，一键转发高质量文案、素材，轻松圈粉的同时，方便分享到各大社交平台，小小手机也可成为销售利器。
+&nbsp;&nbsp;&nbsp;&nbsp;圈集的核心竞争力在于创新的模式和质优低价的商品。圈集依托大量的用户支持和丰厚的订单，形成聚合性需求的模式创新，直接与全球品牌方、源头工厂合作，采用“自营+品牌直供”的模式，与数万个源头品牌直接合作，严格品控，保障正品，直接砍掉中间商赚取差价的环节。店主无需囤货、发货，由圈集统一采购、统一发货、统一服务、统一售后，确保店主轻松赚钱的同时，也确保消费者可以花更少的钱买到更好的东西，同时获得更优服务。加入圈集拥有全套的社交零售培训课程和手把手开店指导，实现简单分享，快乐赚钱。
+</text>
+  <!-- </scroll-view> -->
+
+
+
+
+<!-- </view> -->

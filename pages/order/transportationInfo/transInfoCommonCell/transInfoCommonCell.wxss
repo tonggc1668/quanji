@@ -1,0 +1,48 @@
+.leftContainer {
+  float: left;
+  width:83rpx;
+    height: 125rpx;
+}
+
+.rightContainer {
+  float: left;
+  width:632rpx;
+  border-bottom: 1rpx solid #E6E6E6;
+    height: 125rpx;
+}
+
+.info,
+.time {
+  color: #777777;
+  font-size: 25rpx;
+}
+
+.info {
+  margin-top: 15rpx;
+}
+
+.time {
+  margin-top: 4rpx;
+}
+
+.topLine {
+margin: 0 auto;
+height: 20rpx;
+width: 2rpx;
+background-color: #D8D8D8;
+}
+
+.middleCircle {
+margin: 0 auto;
+height: 28rpx;
+width: 28rpx;
+border-radius: 17rpx;
+background-color: #D8D8D8;
+}
+
+.bottomLine {
+margin: 0 auto;
+height: 76rpx;
+width: 2rpx;
+background-color: #D8D8D8;
+}

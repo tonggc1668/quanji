@@ -1,0 +1,10 @@
+<view class='view_root'>
+  <image src='/images/buyFlow/paySuccess.png' class='image_success'></image>
+  
+  <view class='view_text'>支付成功</view>
+
+  <view class='view_change' bindtap='onGoHome'>
+   进入圈集
+
+  </view>
+</view>

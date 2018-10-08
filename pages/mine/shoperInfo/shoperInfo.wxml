@@ -1,0 +1,117 @@
+<view class='container'>
+
+
+  <view class='info_root'>
+
+    <!-- 红色背景 -->
+    <view class='red_view'></view>
+
+    <view class='view_info'>
+
+      <!-- 个人信息 -->
+      <view class='userinfo_root'>
+
+        <image wx:if="{{userInfo && userInfo.avatarUrl}}" class='userinfo-avatar' src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+
+        <view class='view_change_root'>
+          <text class='text'>{{userInfo.nickName}}</text>
+          <view id='view_change' bindtap='onChange'>
+            <image src='../../../images/mine/change.png' class='order_change'></image>
+
+            <text>切换成买家</text>
+          </view>
+
+        </view>
+      </view>
+
+      <!-- 我的收益 -->
+      <view class='order_root_top'>
+     
+
+        <view class='order_money_item' >
+          <view>¥100.11</view>
+          <text class='text_top'>可提现(元)</text>
+        </view>
+
+        <view class='order_money_item' >
+          <view>¥100.11</view>
+          <text class='text_top'>提现中(元)</text>
+        </view>
+
+        <view class='order_money_item'>
+          <view>100.81</view>
+          <text class='text_top'>已提现(元)</text>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+
+
+
+ <!-- 收益详情列表 -->
+      <view class='order_list_top'>
+     
+
+        <view class='order_list_item' >
+          <view class='text_list_top'>100.11</view>
+          <text class='text_top'>今日收益(元)</text>
+        </view>
+
+        <view class='order_list_item' >
+          <view class='text_list_top'>88</view>
+          <text class='text_top'>今日订单(笔)</text>
+        </view>
+
+      
+      
+
+      </view>
+
+
+
+  <view class='order_list_top'>
+     
+
+        <view class='order_list_item' >
+          <view class='text_list_bottom'>87100.81</view>
+
+          <view >
+        <text class='text_blue'>累计收益(元)</text>
+        <image class='view_right_image' src='/images/order/backBlue.png'></image>
+      </view>
+          
+        </view>
+
+        <view class='order_list_item'>
+          <view class='text_list_bottom'>3456</view>
+              <view >
+        <text class='text_blue'>累计订单(笔)</text>
+        <image class='view_right_image' src='/images/order/backBlue.png'></image>
+      </view>
+        </view>
+
+
+      </view>
+
+
+
+
+
+
+  <view class='order_menu_top' bindtap='selectAddress'>
+    <text>我要提现</text>
+    <image src='../../../images/mine/back.png' id='back_image'></image>
+
+  </view>
+
+
+  <view class='order_menu' bindtap='onDialog'>
+    <text>意见反馈</text>
+    <image src='../../../images/mine/back.png' id='back_image'></image>
+
+  </view>
+
+ 
+</view>

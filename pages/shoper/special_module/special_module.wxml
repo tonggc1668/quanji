@@ -1,0 +1,48 @@
+<view class='special_module_box_many'>
+  <view class="special_module_box"  wx:for="{{special_module_box_add}}" wx:key="unique">
+    <view class='special_module_title' wx:if="{{item.specialPic.specialTitle!=''}}">
+          <image class='circleImage' src="../../../images/homeUser/sessionCircle.png"></image> 
+        <text class='moduleTitleText'>{{item.specialPic.specialTitle}}</text>
+         <image class='triangleImage' src="../../../images/homeUser/sessionTriangle.png"></image> 
+          <image class='lightingImage' src="../../../images/homeUser/sessionLighting.png"></image> 
+    </view>
+    <view class='special_module_big_img' bindtap='jump_spec_or_single' data-single="{{item.specialPic.isSingle}}" data-id="{{item.specialPic.id}}" data-pic="{{item.specialPic.picUrl}}" data-title="{{item.specialPic.specialTitle}}" wx:if="{{item.specialPic.picUrl!=''}}">
+      <image src='{{item.specialPic.picUrl}}'></image>
+    </view>
+    <view class='special_module_product_box' wx:if="{{item.pageList1.length!=0}}">
+      <!-- <view class='swiper_to_slide'>
+        <image src='/images/common/swiper_to_slide.png'></image>
+      </view> -->
+      <view section section_gap>
+        <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%;padding-right:20rpx;overflow-y:hidden;margin-left: 20rpx;">
+          <view class='wonderful_group_box_module'>
+            <view class='wonderful_group_list_module' wx:for="{{item.pageList1}}" wx:key="unique" style="display: block;" bindtap='jump_detail' data-productId="{{item.id}}">
+              <image src='{{item.mainImgUrl}}'></image>
+              <view class='wonderful_price_box_module'>
+                <text>¥{{item.goodsPrice}}</text>
+                <text>¥{{item.marketPrice}}</text>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class='special_product_box'>
+      <view class='special_product_list'  wx:for="{{item.pageList2}}" wx:key="unique" bindtap='jump_detail' data-productId="{{item.id}}">
+        <image src='{{item.mainImgUrl}}'></image>
+        <view class='special_product_name'>
+         {{item.goodsName}}
+        </view>
+        <view class='special_product_price'>
+          <view class='special_product_price_box'>
+            <text>¥{{item.goodsPrice}}</text>
+            <text>¥{{item.marketPrice}}</text>
+          </view>
+          <view class='special_product_num'>
+            已售123
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

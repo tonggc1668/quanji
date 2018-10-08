@@ -1,0 +1,94 @@
+.home_item_container{
+  display: flex;
+   width: 340rpx;
+  height: 620rpx;
+  margin-top: 20rpx;
+  border: 1rpx solid #ededed;
+  border-radius: 5px;
+  background-color: white;
+  flex-direction: column;
+}
+
+
+.home_item_product_text{
+  display: flex;
+  font-size: 32rpx;
+  margin: 20rpx;
+  color: #000;
+
+}
+
+
+.text_root{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+
+}
+
+.text_price{
+  align-items: center;
+  float:  left;
+  font-size: 28rpx;
+  color: #FC003E;
+}
+
+.text_original_price{
+  align-items: center;
+  margin-top: 4rpx;
+  float: left;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  color: #A6A6A6;
+  text-decoration: line-through
+}
+
+.text_num{
+  align-items: center;
+  float:  right;
+  margin-top: 2rpx;
+  font-size: 26rpx;
+  color: #A6A6A6;
+}
+
+
+
+
+
+.home_item_image_container{
+   
+    height: 100%;
+    display: flex;
+    align-items: center;
+  
+}
+
+
+.home_item_image{
+  width: 340rpx;
+  height: 440rpx;
+ 
+}
+
+.home_item_text_product{
+font-size: 30rpx;
+margin-top: 10rpx;
+color: #000;
+}
+
+.home_item_text_money{
+font-size: 30rpx;
+margin-top: 10rpx;
+color: #f00;
+
+}
+
+
+.home_item_text_coupon{
+font-size: 20rpx;
+color: #000;
+float: right;
+margin-top: 20rpx;
+}
+
+

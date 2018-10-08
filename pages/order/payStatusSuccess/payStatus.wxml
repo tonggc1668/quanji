@@ -1,0 +1,22 @@
+<view class="container">
+
+<!-- 支付状态  -->
+<view class='top-status'>
+<image class='status-icon' src='/images/buyFlow/paySuccess.png'></image>
+<text class='status-title'>支付成功</text>
+</view>
+
+<!-- 支付信息  -->
+<view class='middle-info'>
+<view class='info-shop'>圈集小店</view>
+<view class='info-money'>¥{{wxRealPrice}}</view>
+</view>
+
+<!-- 支付跳转 -->
+<view class='bottom-jump'>
+<view bindtap='jumpToOrderList' class='jump-order'>查看订单</view>
+<view bindtap='jumpToHome' class='jump-home'>回首页</view>
+</view>
+
+
+</view>

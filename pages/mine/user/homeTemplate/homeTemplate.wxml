@@ -1,0 +1,33 @@
+
+  <view class='container'>
+
+<!-- tab  -->
+  <view class='top-tab'>
+  </view>
+
+<!-- home banner -->
+  <image  class='top-imageShow' src='/images/homeUser/background.jpg'>
+  </image>
+
+<!-- shop info in top  -->
+  <view class='top-shopInfo'>
+    <image class='shopInfo-icon' src='/images/homeUser/background.jpg '></image>
+
+    <text class='shopInfo-name'>螃蟹的小店</text>
+    <text class='shopInfo-all'>全部商品</text>
+    <text class='shopInfo-number'>731</text>
+   
+    <view class='shopInfo-shareCon'>
+      <!-- <image src='/images/home/back.png '></image>
+      <text>分享</text> -->
+    </view>
+
+    <view class='shopInfo-bottomLine'>
+    </view>
+    
+  </view>
+
+<!-- top entrance  -->
+  
+
+</view>

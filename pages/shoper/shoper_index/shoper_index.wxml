@@ -1,0 +1,182 @@
+<!-- 刘潇模块 -->
+<view class='container'>
+  <!-- 首页轮播 -->
+  <swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swiper-box'>
+    <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item.picUrl}}" class="slide-image" data-single="{{item.isSingle}}" data-id="{{item.id}}" data-pic="{{item.picUrl}}" data-title="{{item.specialTitle}}" bindtap='jump_spec_or_single' />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- home banner -->
+  <view wx:if="{{user_show}}" class='user_box'>
+    <!-- <view class='top-imageShow-box'>
+      <image class='top-imageShow' src='{{shopDetails.shopLogo}}'>
+      </image>
+    </view> -->
+
+    <!-- shop info in top /店铺信息 -->
+    <view wx:if="{{user_show}}" class='top-shopInfo' hidden='true'>
+      <image class='shopInfo-icon' src='{{shopDetails.shopLogo}}'></image>
+      <text class='shopInfo-name'>{{shopDetails.shopName}}</text>
+      <view class='shopInfo-shareCon'>
+        <image class='shopInfo-share-image' src='/images/common/share.png '></image>
+        <!-- <text class='shopInfo-share-text'>分享</text> -->
+        <button class='shopInfo-share-btn' open-type="share">分享</button>
+      </view>
+
+      <view class='shopInfo-bottomLine'>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{saler_show}}" class='saler_box' hidden='true'>
+    <!-- <view class='top-imageShow-box'>
+      <image class='top-imageShow' src='{{shopDetails.shopLogo}}'>
+      </image>
+    </view> -->
+    <view class='top-shopInfo'>
+      <image class='shopInfo-icon' src='{{shopDetails.shopLogo}}'></image>
+
+      <text class='shopInfo-name'>{{shopDetails.shopName}}</text>
+      <!-- <text class='shopInfo-all'>全部商品</text>
+      <text class='shopInfo-number'>{{shopDetails.goodsAmount}}</text> -->
+      <view class='shopInfo-shareCon'>
+        <image class='shopInfo-share-image' src='/images/common/share.png '></image>
+        <!-- <text class='shopInfo-share-text'>分享</text> -->
+        <button class='shopInfo-share-btn' open-type="share">分享</button>
+      </view>
+      <view class='shopInfo-bottomLine'>
+      </view>
+    </view>
+  </view>
+  <!-- 新增专题入口 -->
+  <view class='add_activity_box'>
+    <view class='add_activity_list' wx:for="{{special_module_box}}"  wx:key="unique"  bindtap='jump_spec_or_single' data-single="{{item.isSingle}}" data-id="{{item.id}}" data-pic="{{item.picUrl}}" data-title="{{item.specialTitle}}">
+      <image src='{{item.navigationImg}}'></image>
+      <view>{{item.specialTitle}}</view>
+    </view>
+  </view>
+  <!-- 张楠模块 -->
+  <view class="shoper_index">
+    <!-- 精彩拼团 -->
+    <view class='wonderful_group_buy' wx:if="{{object_group!=0}}">
+      <view class='you_may_like_title group_title_special'>
+         <image class='circleImage' src="../../../images/homeUser/sessionCircle.png"></image> 
+        <text>精 彩 拼 团</text>
+         <image class='triangleImage' src="../../../images/homeUser/sessionTriangle.png"></image> 
+          <image class='lightingImage' src="../../../images/homeUser/sessionLighting.png"></image> 
+      </view>
+      <view class='wonderful_group_title'>
+        <image src='{{wonderful_group_img}}' bindtap='jump_to_group'></image>
+      </view>
+      <view class='wonderful_group_con'>
+        <!-- <view class='swiper_to_slide'>
+          <image src='/images/common/swiper_to_slide.png'></image>
+        </view> -->
+        <view section section_gap>
+          <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%;overflow-y:hidden;margin-left: 20rpx;">
+            <view class='wonderful_group_box'>
+              <view class='wonderful_group_list' wx:for="{{object_group}}" wx:key="unique" style="display: block;" bindtap='jump_to_detail_group' data-productgroupId="{{item.id}}">
+                <image src='{{item.mainImgUrl}}'></image>
+                <view class='wonderful_price_box'>
+                  <text>¥{{item.groupPrice}}</text>
+                  <text>¥{{item.marketPrice}}</text>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+
+    <!-- <view class='store_choice'>
+      <view class='you_may_like_title'>
+        <!-- <image src="../../../images/homeUser/choiceness.png"></image> -->
+        <!-- <text>店铺精选</text>
+      </view>
+      <view class='store_choice_big_box'>
+        <view class='swiper_to_slide'>
+          <image src='/images/common/swiper_to_slide.png'></image>
+        </view>
+        <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%;" bindtap='jump_to_product_detail'>
+          <view class='store_choice_box'>
+            <view class='store_choice_list' wx:for="{{objectArray_two}}" wx:key="unique" style="display: block;" bindtap='jump_detail' data-productId="{{item.id}}">
+              <image src='{{item.mainImgUrl}}'></image>
+              <view class='hot_name'>{{item.goodsName}}</view>
+              <view class='hot_describe'>
+                {{item.goodsDesc}}
+              </view>
+              <view class='hot_price'>
+                <text class='hot_now_price'>¥{{item.voucherPrice}}</text>
+                <text class='hot_prev_price'>¥{{item.goodsPrice}}</text>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+
+
+
+    </view> --> 
+    <!-- 实时榜单 -->
+    <!-- <view class='real_time_product'>
+      <view class='you_may_like_title'>
+       <image class='circleImage' src="../../../images/homeUser/sessionCircle.png"></image> 
+        <text>实 时 榜 单</text>
+         <image class='triangleImage' src="../../../images/homeUser/sessionTriangle.png"></image> 
+          <image class='lightingImage' src="../../../images/homeUser/sessionLighting.png"></image> 
+      </view>
+       <view class='wonderful_group_title'>
+        <image src='{{wonderful_group_img_time}}'></image>
+      </view> 
+      <view class='real_time_rank'>
+        <view class='real_time_rank_list' wx:for="{{rank_product}}" wx:key="unique" style="display: block;" bindtap='jump_detail' data-productId="{{item.id}}">
+          <image src='{{item.smallImg}}' class='rank_img'></image>
+          <image src='{{item.mainImgUrl}}' class='rank_product_img'></image>
+          <view class='rank_product_price'>
+            <text>¥{{item.goodsPrice}}</text>
+            <text>¥{{item.marketPrice}}</text>
+          </view>
+        </view>
+      </view>
+    </view> -->
+
+    <!-- 专场 -->
+    <include src="/pages/shoper/special_module/special_module" />
+
+    <!-- 超值专场 -->
+    <!-- <view class='overflow_farm' bindtap='order_detail_wait_pay'>
+      <view class='you_may_like_title'>
+        <image src="../../../images/homeUser/specialmarket.png"></image>
+        <text>超值专场</text>
+      </view>
+      <view class='special_market_img'>
+        <image src='/images/homeUser/banner.png'></image>
+      </view>
+    </view> -->
+    <!-- 猜你喜欢 -->
+    <scroll-view class='you_may_like' scroll-y="true" style="height: 100%;" bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+      <view class='you_may_like_title'>
+        <!-- <image src="../../../images/homeUser/like.png"></image> -->
+        <image class='circleImage' src="../../../images/homeUser/likeCircle.png"></image> 
+        <text>猜 你 喜 欢</text>
+         <image class='triangleImage' src="../../../images/homeUser/likeTriangle.png"></image> 
+          <image class='lightingImage' src="../../../images/homeUser/likeLighting.png"></image> 
+      </view>
+      <view class='you_may_like_box'>
+        <view class='you_may_like_list' wx:for="{{objectArray}}" wx:key="unique" style="display: block;" bindtap='jump_detail' data-productId="{{item.id}}">
+          <image src='{{item.mainImgUrl}}'></image>
+          <view class='you_may_like_name'>{{item.goodsName}}</view>
+          <view class='price_and_sale'>
+            <view class='price_box'>
+              <text class='now_price'>¥{{item.goodsPrice}}</text>
+              <text class='prev_price'>¥{{item.marketPrice}}</text>
+            </view>
+            <view class='have_sale'>已售{{item.salesVolume}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  
+</view>

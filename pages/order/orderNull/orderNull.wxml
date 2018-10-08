@@ -1,0 +1,27 @@
+<import src="/pages/shoper/yourLikerTemplate/yourLikerTemplate.wxml" />
+<view class='view_null_root'>
+
+  <view class='view_root'>
+    <image src='/images/order/null.png' class='image_null'></image>
+
+    <view class='view_text'>{{info}}</view>
+
+    <view wx:if="{{isNullShow}}" class='view_go' bindtap='goHome'>去店铺逛逛</view>
+
+
+    <!-- 猜你喜欢 -->
+    <view class='you_may_like'>
+      <view class='you_may_like_title'>
+        <!-- <image src="../../../images/homeUser/like.png"></image> -->
+        <text class='text_your_like'>猜你喜欢</text>
+      </view>
+      <view class='you_may_like_box'>
+        <block wx:for="{{orderInfoArrayLike}}" wx:for-item="orderInfoArrayLike">
+          <template is="yourLike" data="{{...orderInfoArrayLike}}" />
+        </block>
+      </view>
+    </view>
+
+
+  </view>
+</view>

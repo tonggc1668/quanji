@@ -1,0 +1,26 @@
+<view class='product_list'>
+  <view class='product_list_banner'>
+    <image src='../../../images/homeUser/banner.png'></image>
+  </view>
+  <view class='product_list_con'>
+     <view class='you_may_like_title'>
+        <image src="../../../images/homeUser/give_prime.png"></image>
+        <text>超值专场</text>
+      </view>
+     <view class='you_may_like_box'>
+      <view class='you_may_like_list' wx:for="{{objectArray}}" wx:key="unique" style="display: block;" bindtap="jump_detail">
+        <image src='{{item.img_url}}'></image>
+        <view class='you_may_like_name'>
+          {{item.name}}
+        </view>
+        <view class='price_and_sale'>
+          <view class='price_box'>
+            <text class='now_price'>¥{{item.price_now}}</text>
+            <text class='prev_price'>¥{{item.price_prev}}</text>
+          </view>
+          <view class='have_sale'>已售{{item.num}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,64 @@
+<import src='../shoper_index/homeUserTopEntrance/homeUserTopEntrance.wxml/' />
+<import src='../shoper_index/homeUserCurrentList/homeUserCurrentList.wxml/' />
+
+
+<view class='view_box'>
+  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+  <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">全部</view>
+   <view class="tab-item {{currentTab==(index+1)?'active':''}}" data-current="{{index+1}}" data-currentadd="{{item.id}}" bindtap="swichNav" wx:for="{{index_category}}" wx:key="{{index_category}}">{{item.specialTitle}}</view>
+    <!-- <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">全部</view>
+     <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">热门推荐</view>
+    <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">服饰</view>  -->
+    <!-- <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">童装</view>
+    <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">家居日用</view>
+    <view class="tab-item {{currentTab==5?'active':''}}" data-current="5" bindtap="swichNav">箱包</view> -->
+    <!-- <view class="tab-item {{currentTab==6?'active':''}}" data-current="6" bindtap="swichNav">女鞋</view>
+    <view class="tab-item {{currentTab==7?'active':''}}" data-current="7" bindtap="swichNav">童鞋</view> -->
+
+  </scroll-view>
+  <view class="scoll-h">
+
+    <block wx:if="{{currentTab ==0}}">
+      <include src="../shoper_index/shoper_index" />
+    </block>
+
+    <block wx:if="{{currentTab ==1}}">
+      <include src="../product_list_activity/product_list_activity" />
+    </block>
+
+    <block wx:if="{{currentTab ==2}}">
+      <include src="../product_list/product_list" />
+    </block>
+
+    <block wx:if="{{currentTab ==3}}">
+      <include src="../product_list/product_list" />
+    </block>
+
+    <block wx:if="{{currentTab ==4}}">
+      <include src="../product_list/product_list" />
+    </block>
+
+    <block wx:if="{{currentTab ==5}}">
+      <include src="../product_list/product_list" />
+    </block>
+
+     <block wx:if="{{currentTab ==6}}">
+      <include src="../product_list/product_list" />
+    </block>
+
+    <block wx:if="{{currentTab ==7}}">
+      <include src="../product_list/product_list" />
+    </block> 
+
+
+
+    <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+    <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view>
+  </view>
+</view>
+<view class='click_back_to_top' bindtap='back_to_top' hidden="{{back_show}}">
+  <image src="../../../images/common/back_to_top.png"></image>
+  <text>顶部</text>
+</view>
+
+<image  catchtap='jumpToGift' class='giftIcon' src='/images/common/giftIcon.png'></image>

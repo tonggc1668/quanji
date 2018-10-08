@@ -1,0 +1,14 @@
+ @import '/pages/order/my_gift/my_gift'; 
+@import '/pages/order/gift_order_detail/gift_order_detail';
+
+.order_status_box{
+  height: auto;
+}
+
+.giftDetail {
+width: 100%;
+margin-top: 30rpx;
+font-size: 28rpx;
+color: #777;
+text-align: center;
+}

@@ -1,0 +1,139 @@
+@import '/pages/order/my_gift/my_gift'; 
+@import '/pages/gift/gift_pay/gift_pay';
+@import '/pages/shoper/shoper_detail/shoper_detail';
+ /* @import '/pages/order/orderInfo/orderInfo';  */
+ page{
+   background: #fff;
+ }
+.pay_price_list{
+  width:50%;
+  background: #FF588A;
+  font-size: 32rpx;
+  text-align: center;
+  color:#fff;
+}
+.pay_price_list:nth-child(2){
+  background: #FF588A;
+}
+.consigneeInfo {
+  width: 670rpx;
+  /* height: 150rpx; */
+  background-color: white;
+  border-radius: 16rpx;
+   box-shadow: 0; 
+  margin:0 auto;
+  overflow: hidden;
+  margin-bottom:20rpx;
+  min-height: 120rpx; 
+  margin-top:20rpx;
+}
+
+
+.topInfo {
+  margin: 25rpx 30rpx;
+  height: 26rpx;
+}
+
+.topPositionImage {
+  float: left;
+  width: 18rpx;
+  height: 26rpx;
+}
+
+.contact {
+  float: left;
+  height: 26rpx;
+  margin-left: 17rpx;
+   font-weight: bold;
+  font-size: 28rpx;
+  line-height: 25rpx;
+}
+
+.arrow-image {
+  float: right;
+  height: 24rpx;
+  width: 14rpx;
+  display: block;
+}
+
+.default {
+  float: left;
+  border: 1px solid red;
+  border-radius: 2rpx;
+  color: red;
+  font-size: 18rpx;
+  width: 60rpx;
+  height: 32rpx;
+  text-align: center;
+  line-height: 28rpx;
+}
+
+.bottomInfo {
+  margin: 0rpx 62rpx;
+  font-size: 20rpx;
+  color: #333;
+}
+
+.address {
+  float: left;
+  /* width: 60rpx; */
+  line-height: 35rpx;
+  text-align: left;
+  height: auto;
+}
+
+.addressInfo {
+  float: left;
+  line-height: 35rpx;
+  text-align: left;
+  width: 432rpx;
+  padding-bottom:15rpx;
+}
+.stepper {
+  border:0;
+}
+.choose_address_before .topPositionImage {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  float: left;
+}
+
+.choose_address_before .default_address {
+  width: 76rpx;
+  height: 36rpx;
+  border: 1px solid #ff2063;
+  color: #ff2063;
+  font-size: 30rpx;
+  float: left;
+  border-radius: 8rpx;
+  line-height: 33rpx;
+  text-align: center;
+  margin-left: 11rpx;
+  margin-top: 2rpx;
+}
+
+.choose_address_before .contact {
+  margin-top: 7rpx;
+}
+.pay_price_list {
+  width:100%;
+}
+.product_name {
+  width:400rpx;
+  margin-left:0;
+}
+.stepper{
+  float:left;
+}
+.stepper text{
+  line-height: 60rpx;
+}
+.gift_words{
+  padding:20rpx;
+}
+.pay_price_list_active{
+  background: #CC9E3D;
+  border-radius: 0;
+  line-height: 98rpx;
+}

@@ -1,0 +1,35 @@
+<view class='product_list'>
+  <view class='product_list_banner'>
+    <image src='{{goods_info.specialPic.pageBanner}}'></image>
+  </view>
+  <view class='product_list_con'>
+    <view class='product_list_title'>
+      <!-- <image src='../../../images/common/quadrilateral.png'></image> -->
+      <text>{{goods_info.specialPic.specialTitle}}</text>
+      <!-- <image src='../../../images/common/quadrilateral.png'></image> -->
+    </view>
+    <view class='you_may_like_box'>
+      <view class='you_may_like_list' wx:for="{{objectArray}}" wx:key="unique" style="display: block;" bindtap="jump_detail" data-productid="{{item.id}}" data-group="{{item.groupPrice}}">
+        <image src='{{item.mainImgUrl}}'></image>
+        <view class='you_may_like_name'>{{item.goodsName}}</view>
+        <view class='price_and_sale'>
+          <view class='price_box'>
+            <text class='now_price' wx:if="{{item.groupPrice==0}}">¥{{item.goodsPrice}}</text>
+            <text class='now_price' wx:else="{{item.groupPrice!=0}}">¥{{item.groupPrice}}</text>
+            <text class='prev_price'>¥{{item.marketPrice}}</text>
+          </view>
+          <view class='have_sale' wx:if="{{item.groupPrice==0}}">已售{{item.salesVolume}}</view>
+          <view class='have_sale' wx:else="{{item.groupPrice!=0}}">
+            {{item.totalNumOfGroup}}已团
+          </view>
+
+        </view>
+
+
+      </view>
+      
+    </view>
+    <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+      <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view>
+  </view>
+</view>

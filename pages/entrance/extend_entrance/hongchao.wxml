@@ -1,0 +1,5 @@
+<view class="loading_box">
+  <image src='/images/welcome/quanji_logo.png' class='quanji_logo'></image>
+  <view class='loading_title'>圈集小店</view>
+  <image src='/images/welcome/loading_quanji.gif' class='loading_img'></image>
+</view>

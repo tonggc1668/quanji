@@ -1,0 +1,112 @@
+<view class="pay_prompt">
+  对方填地址·免邮送上门
+</view>
+<view class='product_information'>
+  <view class='product_information_detail'>
+    <image src='{{img_small_url}}'></image>
+    <view class='product_name_con'>
+      <view class='product_name'>{{product_name}}
+      </view>
+      <view class='buy_goods_information'>
+        <view class='buy_goods_size'>{{product_size}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='give_gift_num'>
+    <view class='give_gift_title'>
+      赠送数量：
+    </view>
+    <view class='operate_box'>
+      <view bindtap='bindMinus'>－</view>
+      <input value='{{num}}' bindblur='bindManual' />
+      <view bindtap='bindPlus'>＋</view>
+    </view>
+  </view>
+  <view class='give_gift_num'>
+    <view class='give_gift_title'>
+      赠送方式：
+    </view>
+    <view class='send_way_box'>
+      <picker bindchange="bindPickerChange" value="{{send_way_num}}" range="{{send_way_array}}">
+        <view>{{send_way_array[send_way_num]}}</view>
+        <image src='/images/buyFlow/back.png'></image>
+      </picker>
+    </view>
+  </view>
+  <view class='change_select'>
+    <view class='give_gift_num' wx:if="{{send_way_num==2}}">
+      <view class='give_gift_title'>
+        开奖人数：
+      </view>
+      <view class='send_way_box'>
+        <view class='input_num' bindtap='lottery_pop_show' wx:if="{{is_input_num==0}}">
+          请输入人数
+        </view>
+        <view wx:else  bindtap='lottery_pop_show'>满{{change_gift_num}}人开奖</view>
+        <!-- <input type="number" bindblur='change_gift_num' value='{{change_gift_num}}'></input> -->
+      </view>
+    </view>
+    <view class='time_box' wx:elif="{{send_way_num==1}}">
+      <view class='give_gift_num'>
+        <view class='give_gift_title'>
+          请选择日期：
+        </view>
+        <view class='send_way_box'>
+          <picker mode="date" value="{{date}}" start="{{currentdate}}" end="{{currentdate_end}}" bindchange="bindDateChange">
+            <view>日期：{{date}}</view>
+          </picker>
+          <image src='/images/buyFlow/back.png'></image>
+        </view>
+      </view>
+      <view class='give_gift_num' wx:if="{{is_today==0}}">
+        <view class='give_gift_title'>
+          请选择时间：
+        </view>
+        <view class='send_way_box'>
+          <picker mode="time" value="{{time}}" start="00:00" end="{{currenttime_after}}" bindchange="bindTimeChange">
+            <view class="picker">
+              时间: {{time}}
+            </view>
+          </picker>
+          <image src='/images/buyFlow/back.png'></image>
+        </view>
+      </view>
+      <view class='give_gift_num' wx:elif="{{is_today==1}}">
+        <view class='give_gift_title'>
+          请选择时间：
+        </view>
+        <view class='send_way_box'>
+          <picker mode="time"  value="{{time}}" start="{{currenttime}}" end="23:59" bindchange="bindTimeChange">
+            <view class="picker">
+              时间：{{time}}
+            </view>
+          </picker>
+          <image src='/images/buyFlow/back.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='gift_words'>
+  <textarea maxlength='100' placeholder='大吉大利，送你好礼' value='{{gift_words}}' bindinput="get_gift_words" hidden="{{textarea_show}}" />
+  <view class='words_length'>
+    <view class='words_length_num'>
+      {{gift_words_length}}/100
+    </view>
+    <view class='change_one' bindtap='change_one_word'>换一句</view>
+  </view>
+</view>
+<view class='pay_price_box'>
+  <view class='pay_price_real'>¥{{wxRealPrice}}</view>
+  <view class='pay_order' bindtap='pay_order'>立即付款</view>
+</view>
+<view class='draw_a_lottery' hidden='{{lottery_pop}}'>
+  <view class='draw_a_lottery_box'>
+    <view class='lottery_title'>请输入开奖人数</view>
+    <input type="number" bindblur='change_gift_num' bindinput='change_gift_num_input' value='{{change_gift_num}}'></input>
+    <view class='sure_and_cancel'>
+      <view class='cancel_num' bindtap='cancel_num'>取消</view>
+      <view class='sure_num gradual_change' bindtap='sure_num'>确定</view>
+    </view>
+  </view>
+</view>

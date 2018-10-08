@@ -1,0 +1,325 @@
+/* pages/entrance/become_shopkeeper/become_shopkeeper.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.become_shoper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.title {
+  width: 100%;
+  height: 34rpx;
+  font-size: 36rpx;
+  text-align: center;
+  margin-top: 680rpx;
+}
+
+.mobileNum {
+  width: 670rpx;
+  height: 68rpx;
+  border: 1rpx solid #333;
+  border-radius: 34rpx;
+  margin: 0 auto;
+  margin-top: 40rpx;
+}
+
+.phoneImage {
+  width: 26rpx;
+  height: 43rpx;
+  margin: 13rpx auto;
+  margin-left: 22rpx;
+  display: block;
+  float: left;
+}
+
+.phoneNumberInput {
+  display: block;
+  float: left;
+  width: 500rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  padding-left: 20rpx;
+}
+
+.verifyContainer {
+  width: 670rpx;
+  height: 68rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+
+.veriftyCode{
+  float: left;
+  width: 449rpx;
+  height: 68rpx;
+  border: 1rpx solid #333;
+  border-radius: 34rpx;
+}
+
+.codeImage {
+  width: 35rpx;
+  height: 40rpx;
+  margin: 14rpx auto;
+  margin-left: 18rpx;
+  display: block;
+  float: left;
+}
+
+.codeInput {
+  display: block;
+  float: left;
+  width: 340rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  padding-left: 20rpx;
+}
+
+.send_code {
+  float: right;
+  width: 196rpx;
+  height: 68rpx;
+  background-color: #F7F7F7;
+  border-radius: 34rpx;
+  line-height: 68rpx;
+  text-align: center;
+  color: #B9B9B9;
+  font-size: 26rpx;
+  border: 1rpx solid #333;
+  padding:0;
+} 
+
+.send_code_after {
+  float: right;
+  width: 196rpx;
+  height: 68rpx;
+  background-color: #FF2063;
+  border-radius: 34rpx;
+  line-height: 68rpx;
+  text-align: center;
+  color: white;
+  font-size: 26rpx;
+}
+
+ button[disabled].send_code {
+  color: #B9B9B9;
+}
+
+
+.wechatName {
+  width: 670rpx;
+  height: 68rpx;
+  border: 1rpx solid #333;
+  border-radius: 34rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+
+.wechatImage {
+  width: 40rpx;
+  height: 34rpx;
+  margin: 17rpx auto;
+  margin-left: 15rpx;
+  display: block;
+  float: left;
+}
+
+.wechatInput {
+  display: block;
+  float: left;
+  width: 500rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  padding-left: 20rpx;
+}
+
+.bottomButton {
+  width: 670rpx;
+  height: 74rpx;
+  text-align: center;
+  color: white;
+  font-size: 32rpx;
+  margin: 0 auto;
+  margin-top: 88rpx;
+  background-color: #FF2063;
+  border-radius: 36rpx;
+}
+
+.shoper_good {
+  width: 710rpx;
+  height: 924rpx;
+  margin: 0 auto;
+  margin-top: -40rpx;
+  margin-bottom: 30 rpx;
+}
+
+.shoper_good_title {
+  width: 100%;
+  height: 180rpx;
+  line-height: 220rpx;
+  text-align: center;
+  position: relative;
+  font-size: 32rpx;
+}
+
+.shoper_good_title_left {
+  width: 16rpx;
+  height: 16rpx;
+  display: block;
+  position: absolute;
+  top: 100rpx;
+  left: 35.8%;
+}
+
+.shoper_good_title_right {
+  width: 16rpx;
+  height: 16rpx;
+  display: block;
+  position: absolute;
+  top: 100rpx;
+  right: 35.8%;
+}
+
+.shoper_good_list {
+  width: 645rpx;
+  height: 198rpx;
+  margin: 0 auto;
+  margin-bottom: 50rpx;
+  padding-left: 32rpx;
+}
+
+.shoper_good_list_title {
+  height: 105rpx;
+  line-height: 120rpx;
+  color: #fc0327;
+  font-size: 32rpx;
+  position: relative;
+  padding-left: 25rpx;
+}
+
+.shoper_good_list_icon {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 5rpx;
+  background: #fc0327;
+  position: absolute;
+  left: 0;
+  top: 55rpx;
+}
+
+.shoper_good_list_con {
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+/* 申请成为店主 */
+
+.apply_shoper {
+  width: 710rpx;
+  height: 701rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  margin-bottom: 50rpx;
+}
+
+.apply_shoper .shoper_good_title {
+  height: 120rpx;
+  line-height: 150rpx;
+}
+
+.apply_shoper .shoper_good_title>image {
+  top: 68rpx;
+}
+
+.check_box {
+  width: 670rpx;
+  height: auto;
+  margin: 0 auto;
+}
+
+.real_name_box {
+  width: 100%;
+  height: auto;
+}
+
+.real_name_title {
+  width: 100%;
+  height: 78rpx;
+  line-height: 78rpx;
+  display: flex;
+}
+
+.real_name_icon {
+  width: 10rpx;
+  height: 24rpx;
+  background: #fc0327;
+  margin-top: 27rpx;
+  margin-right: 20rpx;
+}
+
+.real_name_title {
+  color: #fc0327;
+}
+
+.real_name_input {
+  width: 100%;
+  height: 82rpx;
+  line-height: 82rpx;
+  font-size: 28rpx;
+}
+
+.real_name_input input {
+  border: 1px solid #737373;
+  border-radius: 8rpx;
+  width: 100%;
+  height: 100%;
+  padding-left: 20rpx;
+  display: block;
+  box-sizing: border-box;
+}
+
+.text_prompt {
+  width: 100%;
+  height: 33rpx;
+  line-height: 33rpx;
+  font-size: 24rpx;
+  color: #fc0327;
+  margin-top: 15rpx;
+}
+
+.real_name_box:nth-child(2) .real_name_input input {
+  width: 449rpx;
+  float: left;
+}
+
+
+
+
+
+.apply_button_box {
+  width: 100%;
+  height: 100rpx;
+}
+
+.apply_button {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 36rpx;
+  text-align: center;
+  background: #ffe2e6;
+  color: #fc0327;
+  border-radius: 0;
+}

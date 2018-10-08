@@ -1,0 +1,142 @@
+<view class='root'>
+
+
+  <view class="order_detail_wait_pay">
+    <view class='wait_pay_box'>
+      <view class='wait_for_pay'>
+
+        <view class='icon'>
+          <image class='wait_for_img' src='/images/order/wait_pay.png'></image>
+          <text class='wait_for_pay_title'>{{objectInfo.orderStatusName}}</text>
+        </view>
+
+
+      </view>
+      <!-- <view class='wait_for_img'>
+      <image src='/images/order/wait_for_pay.png'></image>
+    </view> -->
+    </view>
+
+
+    <!-- 快递 -->
+    <view class='user_address'>
+      <view class='user_address_list'>
+        <view class='user_img'>
+          <image src='/images/order/position_center.png'></image>
+        </view>
+        <view class='user_address_detail'>
+          <view class='user_name_phone'>
+            <text>{{secretName}}</text>
+            <text>{{secretPhoneNumber}}</text>
+          </view>
+
+          <view class='user_address_con'>
+            <view class='address'>地址：</view>
+            <view class='addressInfo'>{{secretAddress}}</view>
+          </view>
+
+        </view>
+      </view>
+      <view class='user_address_list'>
+        <view>
+          <image class='user_car' src='/images/order/car_order.png'></image>
+        </view>
+        <view class='user_address_detail'>
+          <view class='user_name_phone'>
+            <text>{{objectInfo.ordersLogisticsObj.logisticsName}}</text>
+          </view>
+          <view class='user_address_con'>
+            快递单号:{{secretTrackingNumber}}
+          </view>
+        </view>
+
+        <view wx:if="{{isShow}}" class='copy_root'>
+          <view class='copy_order_num' bindtap='copy_num'>复制</view>
+        </view>
+      </view>
+
+
+    </view>
+
+
+
+    <!-- 订单 -->
+    <view class='order_detail_box'  data-activity="{{objectInfo.activityType}}" data-id="{{objectArray[0].goodsId}}" 
+    data-shopid="{{objectInfo.shopId}}" bindtap='jump_to_detail'>
+
+      <view class='order_product_img'>
+        <image src='{{objectArray[0].goodsImg}}'></image>
+      </view>
+
+      <view class='order_product_detail'>
+
+        <view class='order_product_title'>
+          <text class='view_two_text'>{{objectArray[0].goodsName}}</text>
+          <text class='view_price'>¥{{objectArray[0].sellingPrice}}</text>
+        </view>
+
+        <view class='order_product_title'>
+          <text class='view_two_type_text'>{{objectArray[0].goodsProperty}}</text>
+          <text class='view_num'> ×{{objectArray[0].goodsSum}}</text>
+        </view>
+
+
+      </view>
+    </view>
+
+
+  </view>
+  <!-- 订单金额 -->
+  <view class='order_price_box'>
+    <view class='order_price_prev'>
+      <view class='order_price_left'>
+        商品金额
+      </view>
+      <view class='order_price_right'>
+        ¥{{objectInfo.sellingPrice}}
+      </view>
+    </view>
+    <view class='order_price_prev'>
+      <view class='order_price_left'>
+        优惠
+      </view>
+      <view class='order_price_right'>
+        -¥{{objectInfo.preferentialSum}}
+      </view>
+    </view>
+    <view class='order_price_prev_two'>
+      <view class='order_price_left'>
+        实付金额
+      </view>
+      <view class='order_price_right'>
+        ¥{{objectInfo.orderRealPrice}}
+      </view>
+    </view>
+
+
+    <view class='order_price_prev_two_bottom'>
+      <view class='contact-btn-con'>
+        <button id='contact-btn' open-type='contact'>联系客服退/换货</button>
+      </view>
+      <view class='order_price_right'>
+        <image class='view_image' src='/images/order/backArrow.png'></image>
+      </view>
+    </view>
+
+
+
+  </view>
+
+  <!-- 订单时间 -->
+  <view class='order_time'>
+    <view class='order_time_box'>
+      <text>下单时间</text>
+      <text>{{objectInfo.orderedTime}}</text>
+    </view>
+    <view class='order_number'>
+      <text>订单编号</text>
+      <text>{{objectInfo.orderNo}}</text>
+      <view class='copy_order' bindtap='copy_code'>复制</view>
+    </view>
+  </view>
+</view>

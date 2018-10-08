@@ -1,0 +1,110 @@
+<!-- <view class="become_shoper" style="background-image:url('https://shq-1256131430.cos.ap-guangzhou.myqcloud.com/04cfdfba66ca4eee860580003c498da4.png'); background-size:cover">
+</view>
+<view class='shoper_good' style="background-image:url('https://shq-1256131430.cos.ap-guangzhou.myqcloud.com/9f89473b7acc4702809e2c6ee4570546.png'); background-size:cover">
+  <view class='shoper_good_title'>
+    <image src='/images/common/red_box.png' class='shoper_good_title_left'></image>
+    您将获得
+    <image src='/images/common/red_box.png' class='shoper_good_title_right'></image>
+  </view>
+  <view class='shoper_good_list' style="background-image:url('https://shq-1256131430.cos.ap-guangzhou.myqcloud.com/93838eb1a4ce4f4a97ddf8012c0b9825.png'); background-size:cover">
+    <view class='shoper_good_list_title'>
+      <view class='shoper_good_list_icon'></view>
+      省心
+    </view>
+    <view class='shoper_good_list_con'>
+      小投入，大收入；只需分享，等收入
+    </view>
+  </view>
+  <view class='shoper_good_list' style="background-image:url('https://shq-1256131430.cos.ap-guangzhou.myqcloud.com/93838eb1a4ce4f4a97ddf8012c0b9825.png'); background-size:cover">
+    <view class='shoper_good_list_title'>
+      <view class='shoper_good_list_icon'></view>
+      轻松
+    </view>
+    <view class='shoper_good_list_con'>
+      超值货源；高性价，高转化
+    </view>
+  </view>
+  <view class='shoper_good_list' style="background-image:url('https://shq-1256131430.cos.ap-guangzhou.myqcloud.com/93838eb1a4ce4f4a97ddf8012c0b9825.png'); background-size:cover">
+    <view class='shoper_good_list_title'>
+      <view class='shoper_good_list_icon'></view>
+      放心
+    </view>
+    <view class='shoper_good_list_con'>
+      专业策划；优选活动，场场爆
+    </view>
+  </view>
+</view>
+<!-- 成为店主申请 -->
+
+<!-- <view class='apply_shoper'>
+  <view class='shoper_good_title'>
+    <image src='/images/common/red_box.png' class='shoper_good_title_left'></image>
+    成为店主
+    <image src='/images/common/red_box.png' class='shoper_good_title_right'></image>
+  </view>
+  <view class='check_box'>  
+      <view class='real_name_box'>
+        <view class='real_name_title'>
+          <view class='real_name_icon'></view>
+          <view class='real_name_title'>手机号</view>
+        </view>
+        <view class='real_name_input'>
+          <input placeholder="请输入手机号，收益提现必用" bindinput="bind_phone" bindblur="phone_check"  type="number" maxlength="{{11}}"/>
+        </view>
+        <view class='text_prompt'  wx:if="{{phone_show}}">请填写格式正确的手机号</view>
+      </view>
+      <view class='real_name_box'>
+        <view class='real_name_title'>
+          <view class='real_name_icon'></view>
+          <view class='real_name_title'>验证码</view>
+        </view>
+        <view class='real_name_input'>
+          <input placeholder="请输入正确的验证码(必填)" bindblur="bind_code"  type="number" maxlength="{{6}}"/>
+          <button class='{{send_code}}' bindtap='send_code' disabled="{{disabled}}">{{getmsg}}</button>
+        </view>
+      </view>
+      <view class='real_name_box'>
+        <view class='real_name_title'>
+          <view class='real_name_icon'></view>
+          <view class='real_name_title'>微信号</view>
+        </view>
+        <view class='real_name_input'>
+          <input placeholder="请输入微信号，培训指导必用"  bindblur="bind_weixin"/>
+        </view>
+      </view>
+    </view>
+</view>
+<view class='apply_button_box' bindtap='jump_to_pay'>
+  <button class='apply_button'>立即申请</button>
+</view> -->
+
+<view class="become_shoper" style="background-image:url('{{bgImageUrl}}'); background-size:cover">
+
+  <view class='title'>成为店主</view>
+
+  <!-- 手机号码  -->
+  <view class='mobileNum'>
+    <image src='/images/welcome/phone.png' class='phoneImage'></image>
+    <input class='phoneNumberInput' placeholder="请输入手机号，收益提现必用" bindinput="bind_phone" type="number" maxlength="{{11}}" />
+  </view>
+
+  <!-- 验证码  -->
+  <view class='verifyContainer'>
+    <view class='veriftyCode'>
+      <image src='/images/welcome/code.png' class='codeImage'></image>
+      <input class='codeInput' placeholder="请输入正确的验证码(必填)" bindinput="inputCode" type="number" maxlength="{{6}}" />
+    </view>
+    <button type="button" class='{{send_code}}' bindtap='send_code' disabled="{{disabled}}">{{getmsg}}</button>
+  </view>
+
+  <!--  微信号 -->
+  <view class='wechatName'>
+    <image src='/images/welcome/wechat.png' class='wechatImage'></image>
+    <input class='wechatInput' placeholder="请输入微信号，培训指导必用" bindinput="inputWeChatName" bindblur="bind_weixin" />
+  </view>
+
+  <!-- 立即申请  -->
+  <button type="button"  bindtap='jump_to_pay' class='bottomButton'>立即申请</button>
+
+
+</view>

@@ -1,0 +1,13 @@
+<template name="homeItem">
+  <view class="home_item_container">
+    <image mode='scaleToFill' src='/images/homeUser/product_one.png' class='home_item_image'></image>
+
+    <text class='home_item_product_text'>春季2018韩版修身9分袖连衣裙</text>
+
+    <view class='text_root'>
+      <text class='text_price'>$123</text>
+      <text class='text_original_price'>$168</text>
+      <text class='text_num'>已售1234</text>
+    </view>
+  </view>
+</template>

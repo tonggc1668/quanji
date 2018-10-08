@@ -1,0 +1,25 @@
+.entrance-container {
+  display: flex;
+  align-items: center;
+  height: 183rpx;
+  width: 187rpx;
+  flex-direction: column;
+  background-color: white;
+}
+
+.entrance-image {
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  margin-top:20rpx;
+}
+
+.entrance-text {
+  width: 84rpx;
+  height: 33rpx;
+  margin: auto;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+}

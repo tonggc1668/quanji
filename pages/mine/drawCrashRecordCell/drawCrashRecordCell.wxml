@@ -1,0 +1,17 @@
+<template name="drawCrashRecordCell">
+  <view class='cell-container'>
+
+    <view class='left-container'>
+      <view class='left-price'>¥{{withdrawCash}}</view>
+      <view class='left-time'>{{auditTime}}</view>
+    </view>
+
+    <view class='right-container'>
+      <view wx:if="{{presentStatus==-1}}" class='right-status-error'> 异常,已拒绝 </view>
+      <view wx:if="{{presentStatus==0  }}" class='right-status-wait'>待打款</view>
+      <view wx:if="{{presentStatus==1}}" class='right-status-finish'> 已打款 </view>
+    </view>
+
+  </view>
+
+</template>

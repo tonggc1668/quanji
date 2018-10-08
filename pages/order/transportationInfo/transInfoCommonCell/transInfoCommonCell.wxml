@@ -1,0 +1,12 @@
+<template name="transInfoCommonCell">
+<view class='leftContainer'>
+<view class='topLine'></view>
+<view class='middleCircle'></view>
+<view class='bottomLine'></view>
+</view>
+
+<view class='rightContainer'>
+<view class='info'>{{context}}</view>
+<view class='time'>{{ftime}}</view>
+</view>
+</template>

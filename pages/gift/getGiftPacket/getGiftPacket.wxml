@@ -1,0 +1,38 @@
+<view class='container'>
+
+
+
+  <view class='cancleCon' bindtap='cancleClick'>
+    <image class='backIcon' src='/images/buyFlow/close.png' background-size="cover"></image>
+  </view>
+
+
+  <view style="background-image:url({{bgURL}});background-size:cover" class='packetInnerCon'>
+    <view class='iconPicCon'>
+      <image class='iconPic' src="{{headImgSrc}}"></image>
+    </view>
+
+    <view class='senderName'>{{senderName}}</view>
+    <view wx:if="{{isTranspond==1}}">
+      <!-- <view class='sendTitle' wx:if="{{gift_info.isSelf==1}}">给你送了个礼物</view> -->
+      <view class='sendTitle' wx:if="{{is_regifted==1}}">给你送了个礼物</view>
+      <view class='sendTitle' wx:elif="{{giftType==2}}">发送了一个礼物，满{{gift_info.participantsNumber}}人开奖</view>
+      <view class='sendTitle' wx:else>发送了一个礼物，{{gift_info.deadline}}开奖</view>
+    </view>
+    <view wx:else>
+      <view class='sendTitle' wx:if="{{giftType==0}}">给你送了个礼物</view>
+      <view class='sendTitle' wx:elif="{{giftType==2}}">发送了一个礼物，满{{gift_info.participantsNumber}}人开奖</view>
+      <view class='sendTitle' wx:else>发送了一个礼物，{{gift_info.deadline}}开奖</view>
+    </view>
+
+    <view class='sendInfo' wx:if="{{can_receive==1}}">{{orderGiftWord}}</view>
+    <view class='sendInfo' wx:else>{{other_words}}</view>
+    <form bindsubmit="formSubmit" report-submit="true">
+      <image src='/images/buyFlow/receive_gift.png' class='receive_gift' hidden='{{receive_is_show}}' wx:if="{{is_rob==0}}"></image>
+      <image src='/images/buyFlow/lottery_draw.png' class='receive_gift' hidden='{{receive_is_show}}' wx:else></image>
+      <button formType="submit" class='getButton'></button>
+      <!-- <view bindtap='getGiftClick' class='getButton'></view> -->
+    </form>
+    <view class='look_gift_detail' hidden='{{look_gift_detail}}' bindtap='look_gift_detail'>查看礼物详情 ＞</view>
+  </view>
+</view>

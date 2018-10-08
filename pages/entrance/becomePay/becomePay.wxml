@@ -1,0 +1,13 @@
+<view class='view_root'>
+  <image src='/images/buyFlow/paySuccess.png' class='image_success'></image>
+  
+  <view class='view_text'>资料提交成功</view>
+
+  <view class='view_change' bindtap='goBack'>
+    <text class='text'>更换申请资料</text>
+    <image src='/images/order/backBlue.png' class='image_back'></image>
+  </view>
+
+
+  <view class='view_bottom' bindtap='onPay' bindtap='jump_to_success'>支付99元</view>
+</view>

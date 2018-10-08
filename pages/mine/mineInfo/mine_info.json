@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "圈集小店",
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+    "disableScroll": true
+}

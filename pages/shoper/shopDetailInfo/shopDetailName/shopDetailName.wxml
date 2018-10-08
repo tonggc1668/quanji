@@ -1,0 +1,6 @@
+<view class='topContainer'>
+<input  bindinput='dealWithInput' class='topInput' value="{{inputText}}" placeholder="请输入店铺名称" placeholder-class="placeHolderClass"/>
+<image bindtap='cancleImageClick' class='{{cancleImageState}} topCancleImage' src='/images/common/inputClose.png'> </image>
+</view>
+
+<view bindtap='saveBtnClick' class='saveBtn {{buttonState}}' >保存</view>

@@ -1,0 +1,291 @@
+<view class='{{view_big_root}}'>
+  <view class="slide_box">
+    <swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='slide_swiper' bindchange="bindViewchange">
+      <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+        <swiper-item width="750rpx" height="750rpx" display="block" bindtap="swipclick">
+          <image src="{{item.imgUrl}}" class="slide-image" width="750rpx" height="750rpx" display="block" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='product_detail'>
+      <view class='product_detail_title'>
+        <view class='product_name'>{{goodsInfo.goodsName}}</view>
+        <view class='share_box'>
+          <image src='../../../images/common/share.png'></image>
+          <button open-type="share">分享</button>
+          <!-- <text>分享</text>  -->
+        </view>
+      </view>
+      <view class='product_price_num'>
+        <view class='product_price'>
+          <text class='now_price'>¥{{goodsInfo.goodsPrice}}</text>
+          <text class='prev_price'>¥{{goodsInfo.marketPrice}}</text>
+        </view>
+        <view class='product_sale_num'>已售{{goodsInfo.salesVolume}}</view>
+      </view>
+    </view>
+    <view class='customer_box'>
+      <view class='customer_list'>
+        <image src="../../../images/common/checked_customer.png"></image>
+        <text>由供应商发货&售后服务</text>
+      </view>
+      <view class='customer_list'>
+        <image src="../../../images/common/checked_customer.png"></image>
+        <text>48小时发货</text>
+      </view>
+      <view class='customer_list'>
+        <image src="../../../images/common/checked_customer.png"></image>
+        <text>8天退货</text>
+      </view>
+    </view>
+    <!-- 优惠券 -->
+    <view class='coupon_box' bindtap='shareRequestHandler' hidden='{{coupon_show}}'>
+      <view class='coupon_background' wx:if="{{coupon_detail_isshow==1}}" style="background-image:url('https://items-1255492638.cos.ap-guangzhou.myqcloud.com/a22e0977c3954d4ab117f340198b7853.png'); background-size:cover">
+        <view class='coupon_price_box'>
+          <view class='coupon_price_title'>
+            RMB
+          </view>
+          <view class='coupon_price'>
+            {{ticketPrice}}
+          </view>
+        </view>
+        <view class='store_coupon_box'>
+          <view class='store_coupon_title'>
+            <view class='store_coupon_icon'>
+              单品
+            </view>
+            <view class='store_coupon_name'>
+              <view class='store_coupon_name_overflow'>
+                优惠券
+              </view>
+            </view>
+          </view>
+          <view class='store_coupon_con store_coupon_con_one'>
+            限此商品使用
+          </view>
+          <view class='store_coupon_con'>
+            领取后{{goodsInfo.indate}}天后有效
+          </view>
+        </view>
+        <view class='click_receive_coupon'>
+          点击领取
+        </view>
+      </view>
+      <view class='coupon_background' wx:else="{{coupon_detail_isshow==0}}" style="background-image:url('https://items-1255492638.cos.ap-guangzhou.myqcloud.com/80b2117852af472caa5044e3fdb1aa65.png'); background-size:cover">
+        <view class='coupon_price_box'>
+          <view class='coupon_price_title'>
+            RMB
+          </view>
+          <view class='coupon_price'>
+            {{ticketPrice}}
+          </view>
+        </view>
+        <view class='store_coupon_box'>
+          <view class='store_coupon_title'>
+            <view class='store_coupon_icon'>
+              单品
+            </view>
+            <view class='store_coupon_name'>
+              <view class='store_coupon_name_overflow'>
+                优惠券
+              </view>
+            </view>
+          </view>
+          <view class='store_coupon_con store_coupon_con_one'>
+            限此商品使用
+          </view>
+          <view class='store_coupon_con'>
+            领取后48小时内有效
+          </view>
+        </view>
+        <view class='click_receive_coupon click_receive_coupon_recevied'>
+          已领取
+        </view>
+      </view>
+    </view>
+    <view class='hot_product'>
+      <view class='swiper_to_slide'>
+        <image src='/images/common/swiper_to_slide.png'></image>
+      </view>
+      <view class='hot_product_title'>
+        <image src='/images/common/hot_icon_detail.png'></image>
+        <view>热卖商品</view>
+      </view>
+      <view class="section section_gap">
+        <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+          <view class='hot_product_box'>
+            <view class='hot_product_list' wx:for="{{objectArray}}" wx:key="unique" style="display: block;" data-id="{{item.id}}" bindtap='hot_product_jump'>
+              <image src="{{item.mainImgUrl}}"></image>
+              <view class='hot_product_name'>{{item.goodsName}}</view>
+              <view class='hot_product_price'>
+                <text class='hot_product_now'>¥{{item.goodsPrice}}</text>
+                <text class='hot_product_prev'>¥{{item.marketPrice}}</text>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class='img_box'>
+      <view class='img_small_box' wx:for="{{goods_details_big}}" wx:key="unique">
+        <image src='{{item.descImg}}' mode="widthFix"></image>
+      </view>
+    </view>
+    <!-- 加入圈集 -->
+    <view class='join_quanji'>
+      <view class='join_quanji_box'>
+        <view class='join_quanji_title'>
+          自购省钱·分享赚钱
+        </view>
+        <view class='benefit_plan'>
+          <view class='benefit_plan_list'>
+            <image src='../../../images/homeUser/benefit_one.png'></image>
+            <text>供应商发货</text>
+          </view>
+          <view class='benefit_plan_list'>
+            <image src='../../../images/homeUser/benefit_two.png'></image>
+            <text>48小时发货</text>
+          </view>
+          <view class='benefit_plan_list'>
+            <image src='../../../images/homeUser/benefit_three.png'></image>
+            <text>8天退货</text>
+          </view>
+        </view>
+        <view class='join_quanji_button' bindtap='join_quanji'>
+          <view>加入圈集</view>
+          <image src="/images/common/arrow_click_join.png"></image>
+        </view>
+      </view>
+
+
+    </view>
+    <view class='click_back_to_top' bindtap='back_to_top' hidden="{{back_show}}">
+      <image src="../../../images/common/back_to_top.png"></image>
+      <text>顶部</text>
+    </view>
+    <!-- 底部导航 -->
+    <view class='bottom_box'>
+      <view class='bottom_list' bindtap='jump_to_home'>
+        <image src="../../../images/common/home_normal_two.png"></image>
+        <text>首页</text>
+      </view>
+      <view class='bottom_list' bindtap='click_add_collect'>
+        <image src="../../../images/common/star_collect.png" wx:if="{{isCollection==0}}"></image>
+        <image src='/images/common/star_collected.png' wx:else="{{isCollection==1}}"></image>
+        <text>收藏</text>
+      </view>
+      <view class='bottom_list' catchtap='shareToFriendsCircle'>
+        <image src="../../../images/common/share_friend.png"></image>
+        <button>保存</button>
+      </view>
+      <view class='bottom_list' bindtap='showProductDialog' data-is_rightbuy='0'>
+        <!-- <image src="../../../images/common/share_friend.png"></image> -->
+        <text>赠送礼物</text>
+      </view>
+      <view class='bottom_list' bindtap='showProductDialog' data-is_rightbuy='1'>
+        <text wx:if="{{coupon_text==0}}">立即购买</text>
+        <text wx:else="{{coupone_text==1}}">{{coupon_text_con}}</text>
+        <view wx:if="{{ticketPrice==0}}">¥{{goodsInfo.goodsPrice}}</view>
+        <view wx:else="{{ticketPrice!=0}}">¥{{goodsInfo.voucherPrice}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部弹窗 -->
+  <view hidden="{{showDialog}}" class='view_root'>
+    <view class='container' data-clickarea='1' id="clickarea">
+      <view class='view_close' bindtap='hideProductDialog'>
+        <image class='image_close' src='/images/buyFlow/close.png'></image>
+      </view>
+      <!-- 第一部分 -->
+      <view class='view_first'>
+        <view class='home_item_image_box' style='width:180rpx;height:180rpx;float:left;margin-left:20rpx;margin-top:40rpx;overflow:hidden;' bindtap="productDetails">
+          <image src="{{img_small_url}}" mode='scaleToFill' class='home_item_image'></image>
+        </view>
+        <view class='view_text'  wx:if="{{is_buy_now==1}}">
+          <view class='view_price'>价格：¥{{voucherPrice}}</view>
+          <view class='view_size'>{{check_size_color}}</view>
+        </view>
+        <view class='view_text' wx:else>
+          <view class='view_price' wx:if="{{is_same==0}}">价格：¥{{minPrice}}-{{maxPrice}}</view>
+          <view class='view_price' wx:else>价格：¥{{maxPrice}}</view>
+          <view class='view_size'>{{check_size_color}}</view>
+        </view>
+      </view>
+
+      <view id='view_scroll'>
+        <view class='view_scroll_box'>
+          <!-- 第二部分 -->
+          <!-- 只有一种默认规格时展示 -->
+          <view class='buy_goods_single' wx:if="{{spec_is_single==0}}">
+            <view class='text_size'>规格</view>
+            <view class='view_size_for_root'>
+              <view class="view_size_for_active">默认</view>
+            </view>
+          </view>
+          <!-- 多种规格时展示 -->
+          <view class='buy_goods_many' wx:if="{{spec_is_single==1}}">
+            <view class='text_size'>{{size_title}}</view>
+            <view class='view_size_for_root'>
+              <view class="view_size_for {{item.checked?'view_size_for_active':''}}" wx:for="{{numArray}}" wx:key="unique" style="display: block;" bindtap='attrClick' data-group-id='0' data-id="{{item.id}}">{{item.attrName}}</view>
+            </view>
+            <!-- 第三部分 -->
+            <view class='text_color'>{{color_title}}</view>
+            <view class='view_size_for_root'>
+              <view class="view_size_for  {{item.checked?'view_size_for_active':''}}" wx:for="{{colorArray}}" wx:key="unique" style="display: block;" bindtap='attrClickColor' data-group-id='1' data-id="{{item.id}}">{{item.attrName}}</view>
+            </view>
+          </view>
+          <!-- 第四部分 -->
+          <view class='text_num_box'>
+            <view class='text_num'>数量</view>
+            <view class="stepper">
+              <!-- 减号 -->
+              <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+              <!-- 数值 -->
+              <input type="number" bindblur="bindManual" maxlength='5' value="{{num}}" />
+              <!-- 加号 -->
+              <text class="normal" bindtap="bindPlus">+</text>
+
+            </view>
+
+          </view>
+
+        </view>
+
+      </view>
+
+      <!-- 第五部分 -->
+
+      <view class='view_buy' bindtap='jump_to_pay' wx:if="{{is_buy_now==1}}">
+        <text class='text_buy'>立即购买</text>
+      </view>
+      <view wx:else>
+        <view class='no_choose_size'>不选尺码以最高价格付款，如有差价自动退回送礼账户</view>
+        <view class='size_sure_box'>
+          <view class='size_sure_list' bindtap='not_choose_size'>
+            不选尺码
+          </view>
+          <view class='size_sure_list' bindtap='choose_size_submit'>
+            确定
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+
+  <!--   -->
+
+  <view wx:if="{{hideShareToFriendCircle}}" class='bgShadow' bindtap='clickShareFrinedCircleShadow'>
+    <canvas style="width:700rpx;height:1088rpx;margin:0  auto;margin-top:57rpx" canvas-id="myCanvas">
+    </canvas>
+
+
+    <view class="edit-footer">
+      <button class="button-done" bindtap="savePic">保存至相册</button>
+    </view>
+
+  </view>
+
+</view>

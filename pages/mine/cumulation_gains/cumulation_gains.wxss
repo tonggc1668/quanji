@@ -1,0 +1,149 @@
+page {
+  width: 100%;
+  height: 100%;
+  background: #f7f7f7;
+}
+
+.total_gains_box {
+  width: 100%;
+  height: 149rpx;
+  background: #fff;
+  display: flex;
+  padding-top: 20rpx;
+  margin-top: 1rpx;
+  margin-bottom: 20rpx;
+}
+
+.total_gains_list {
+  width: 50%;
+  height: 109rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.total_gains_list:nth-child(1) {
+  border-right: 2rpx solid #f2f2f2;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.total_gains_price {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  color: #b2b2b2;
+}
+
+.total_gains_list:nth-child(2) .total_gains_price {
+  color: #b2b2b2;
+}
+
+/* 收益记录 */
+
+.gains_record {
+  width: 100%;
+  height: auto;
+  /* background: #fff; */
+}
+
+.gains_record_title {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin: 0 auto;
+  /* border-bottom: 1rpx solid #f2f2f2; */
+  padding-left:47rpx;
+  background: #fff;
+}
+
+.recordChildTitle {
+  float: left;
+  line-height: 88rpx;
+  font-size: 28rpx;
+}
+
+.first-arrow {
+  float: right;
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 19rpx;
+  margin-top: 44rpx;
+}
+
+.gains_record_box {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background: #fff;
+  margin-top:20rpx;
+}
+
+.gains_record_list {
+  width: 100%;
+  height: 113rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+
+.gains_record_list:last-child {
+  border: 0;
+}
+
+.gains_record_money {
+  height: 100%;
+  margin-left:47rpx;
+}
+
+.gains_record_money_box {
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: 17rpx;
+  color:#FF2063;
+  font-size: 28rpx;
+}
+
+.gains_record_time {
+  font-size: 24rpx;
+  color: #B2B2B2;
+  margin-top: 5rpx;
+}
+
+.look_for_gains {
+  height: 48rpx;
+  width: 130rpx;
+  line-height: 48rpx;
+  color: #B2B2B2;
+  font-size: 22rpx;
+  border: 1rpx solid #B2B2B2;
+  margin-top: 30rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  margin-right:25rpx;
+}
+
+.loading {
+  padding: 10rpx;
+  text-align: center;
+}
+
+.loading:before {
+  display: inline-block;
+  margin-right: 5rpx;
+  vertical-align: middle;
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  /* background: url("../../../images/mine/loading.png") no-repeat;   */
+  background-size: contain;
+  animation: rotate 1s linear infinite;
+}
+
+.loading.complete:before {
+  display: none;
+}
+

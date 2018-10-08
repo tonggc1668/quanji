@@ -1,0 +1,24 @@
+<import src="/pages/shoper/yourLikerTemplate/yourLikerTemplate.wxml" />
+<view class='view_null_root'>
+
+  <view class='view_root'>
+
+    <image class='noCoupon-image' src='/images/coupon/noCoupon.png'></image>
+    <view class='noCoupon-title'>您还没有提现记录哦！</view>
+
+
+      <!-- 猜你喜欢 -->
+    <!-- <view class='you_may_like'>
+      <view class='you_may_like_title'>
+        <text class='text_your_like'>猜你喜欢</text>
+      </view>
+      <view class='you_may_like_box'>
+        <block wx:for="{{orderInfoArrayLike}}" wx:for-item="orderInfoArrayLike">
+          <template is="yourLike" data="{{...orderInfoArrayLike}}" />
+        </block>
+      </view>
+    </view> -->
+
+
+  </view>
+</view>

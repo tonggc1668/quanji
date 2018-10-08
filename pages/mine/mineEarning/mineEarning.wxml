@@ -1,0 +1,64 @@
+<view class='container'>
+
+  <!--  TOP INFO  -->
+  <view class='topContainer'>
+
+    <view class='topInfoCon'>
+      <view class='historyEarningCon'>
+        <view class='historyEarningTitle'>累计收益(元)</view>
+        <view class='historyEarningCount'>{{historyIncome}}</view>
+      </view>
+
+      <view class='tagsCon'>
+        <view class='backToMineInfo' bindtap='backToMine'>个人中心</view>
+        <view class='drawCrash' bindtap='drawCrashClick'>提现</view>
+      </view>
+    </view>
+
+
+    <view class='detailCon'>
+      <view class='salesCountCon'>
+        <view class='detailTitle'>累计销售额(元)</view>
+        <view class='detailNum'>{{histoTotalPrice}}</view>
+      </view>
+
+      <!-- <view class='peopleCount'>
+        <view class='detailTitle'>下线商家(人)</view>
+        <view class='detailNum'>119</view>
+      </view> -->
+
+     <!-- 这个是累计订单界面跳转事件  bindtap='recordOrderClick' -->
+      <view class='orderNumCon' >
+        <view class='detailTitle'>累计订单(笔)</view>
+        <view class='detailNum'>{{historyOrders}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='bottomContainer'>
+    <view class="changeData">
+      <block wx:for="{{titles}}">
+
+        <view class='titleCon'>
+          <view id="{{index}}" bindtap="clickData" class="title {{index==selectedTitle ? 'title-selected' : ''}}">
+            {{item}}
+          </view>
+        </view>
+      </block>
+    </view>
+    <swiper bindchange="bindChange" current='{{selectedTitle}}' style="height:1rpx">
+      <block wx:for="{{titles}}">
+        <swiper-item>
+          <!-- <view class="ecContainer">     {{item}}
+            <ec-canvas id="mychart-dom-line" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+          </view> -->
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="ecContainer" style="background-image:url('https://items-1255492638.cos.ap-guangzhou.myqcloud.com/805faf3070e04cb6992cf7f3fda23c4a.png'); background-size:cover">
+    <ec-canvas id="mychart-dom-line" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+  </view>
+
+</view>

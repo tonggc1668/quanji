@@ -1,0 +1,58 @@
+<view class='container_new' style='overflow:auto;'>
+
+  <view class='first-container'>
+    <view class='top-container' bindtap='questionFirstClick'>
+      <view class="first-title">圈集小店是什么</view>
+      <image class='first-arrow' src='{{arrowImageSrc}}'></image>
+    </view>
+    <view wx:if="{{isHideFirstDetail}}" class='first-detail'>圈集将分享及闲暇之余赚零钱的理念融入电商运营中：用户在自己开店的同时也能参加拼团活动，在与好友、家人等分享成功后，能以比平时更低的价格买到更优质商品，用户也因分享销售得到提成收益</view>
+  </view>
+
+
+  <view class='first-container'>
+    <view class='top-container' bindtap='questionSecondClick'>
+      <view class="first-title">如何领取优惠券</view>
+      <image class='first-arrow' src='{{arrowImageSrcSec}}'></image>
+    </view>
+    <view wx:if="{{isHideSecDetail}}" class='first-detail'>您可以在宝贝页中领取对应的“单品优惠券”。也可以持续关注我们，在我们推出的一系列活动中，领取相应的活动优惠券。</view>
+    </view>
+
+
+  <view class='first-container'>
+    <view class='top-container' bindtap='questionThirdClick'>
+      <view class="first-title">如何使用优惠券 </view>
+      <image class='first-arrow' src='{{arrowImageSrcThird}}'></image>
+    </view>
+    <view wx:if="{{isHideThirdDetail}}" class='first-detail'>您的订单下单后，只要符合优惠券的使用条件，系统会自动帮您使用优惠券。</view>
+  </view>
+
+
+  <view class='first-container'>
+    <view class='top-container' bindtap='questionFouthClick'>
+      <view class="first-title">如何查看优惠券</view>
+      <image class='first-arrow' src='{{arrowImageSrcFouth}}'></image>
+    </view>
+    <view wx:if="{{isHideFouthDetail}}" class='first-detail'>您可打开【圈集】-【个人主页】-【优惠券】查看优惠券的使用状况，相关使用条件和有效期也可以查看。</view>
+  </view>
+
+  <view class='first-container'>
+    <view class='top-container' bindtap='questionFifthClick'>
+      <view class="first-title">退款后，优惠券怎么处理</view>
+      <image class='first-arrow' src='{{arrowImageSrcFifth}}'></image>
+    </view>
+    <view wx:if="{{isHideFifthDetail}}" class='first-detail'>产生退款的订单若是使用优惠券，优惠券将失效。建议您及时关注优惠券的使用期限。</view>
+  </view>
+
+
+  <view class='first-container'>
+    <view class='top-container' bindtap='questionSixthClick'>
+      <view class="first-title">关于单品优惠券</view>
+      <image class='first-arrow' src='{{arrowImageSrcSixth}}'></image>
+    </view>
+    <view wx:if="{{isHideSixthDetail}}" class='first-detail'>单品优惠券只能在领取的相应店铺使用。 \r\n
+单品优惠券自领取后48小时内有效，请您及时使用。\r\n
+用户可以在不同店主的店铺多次领取对应的单品优惠券。\r\n
+最终解释权归圈集所有。</view>
+  </view>
+
+</view>

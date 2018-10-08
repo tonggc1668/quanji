@@ -1,0 +1,28 @@
+.footer_box{
+  width:100%;
+  height:98rpx;
+  background: #fff;
+  position: fixed;
+  bottom:0;
+  left:0;
+  display: flex;
+  border-top:1rpx solid #f2f2f2;
+}
+.footer_list{
+  width:50%;
+  height:100%;
+  text-align: center;
+}
+.footer_list{
+  font-size: 28rpx;
+}
+.footer_list .footer_list_icon{
+  display: block;
+  width:38rpx;
+  height:38rpx;
+  margin:0 auto;
+  margin-top:16rpx;
+}
+.footer_list_active{
+  color:#FC0327;
+}

@@ -1,0 +1,68 @@
+<view class='view_root'>
+<view class='container'>
+  <!-- 第一部分 -->
+  <view class='view_first'>
+    <image mode='scaleToFill' src='/images/homeUser/product_one.png' class='home_item_image'></image>
+
+    <view class='view_text'>
+      <view class='view_price'>价格：¥234.5</view>
+      <view class='view_size'>请选择颜色尺寸</view>
+    </view>
+
+    <view class='view_close' bindtap='hideProductDialog'>
+      <image class='image_close' src='/images/buyFlow/close.png'></image>
+    </view>
+  </view>
+
+  <view id='view_scroll'>
+    <view class='view_scroll_box'>
+
+      <!-- 第二部分 -->
+      <view class='text_size'>尺码</view>
+      <view class='view_size_for_root'>
+       <view class='view_size_for' wx:for="{{objectArray}}" wx:key="unique" style="display: block;">
+        {{item.id}}
+        </view>
+      </view>
+       
+
+      <!-- 第三部分 -->
+      <view class='text_color'>颜色</view>
+  <view class='view_size_for_root'>
+       <view class='view_size_for' wx:for="{{colorArray}}" wx:key="unique" style="display: block;">
+        {{item.id}}
+        </view>
+      </view>
+      <!-- 第四部分 -->
+      <view class='text_num'>数量</view>
+
+
+      <view class="stepper">
+        <!-- 减号 -->
+        <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+        <!-- 数值 -->
+        <input type="number" bindchange="bindManual" maxlength='5' value="{{num}}" />
+        <!-- 加号 -->
+        <text class="normal" bindtap="bindPlus">+</text>
+
+      </view>
+    
+    </view>
+
+  </view>
+
+
+
+
+
+
+
+
+  <!-- 第五部分 -->
+
+  <view class='view_buy'>
+    <text class='text_buy'>立即购买</text>
+  </view>
+</view>
+
+</view>

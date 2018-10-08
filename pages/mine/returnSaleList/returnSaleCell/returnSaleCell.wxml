@@ -1,0 +1,65 @@
+<template name="returnSaleListCell">
+  <view class='order_root'>
+    <!-- 第一部分 -->
+    <view class='view_first' bindtap='onShowView'>
+      <image wx:if="{{isUser == 0}}" class='view_left_image' src='/images/order/orderShop.png'></image>
+      <view wx:if="{{isUser == 0}}" class='view_left'>{{shopName}}</view>
+
+      <view wx:if="{{isUser == 1}}" class='view_left'>下单时间：{{orderedTime}}</view>
+      <!-- <view  wx:if="{{orderStatus == 0 && isUser == 0}}" class="view_right_pay" bindtap='goPay' data-orderid = "{{id}}">
+        <text class='view_text_pay'>马上支付</text>
+        <image class='view_right_image' src='/images/order/backBlue.png'></image>
+      </view> -->
+      <view class='view_right'>{{orderStatusName}}</view>
+
+    </view>
+
+    <!-- 第二部分 -->
+
+    <view class='view_two' bindtap='jump_to_detail' data-orderId="{{id}}" data-status="{{orderStatusName}}">
+      <image class='image_product' src="{{ordersGoodsInfoList[0].goodsImg}}"></image>
+
+      <view class='view_two_right'>
+
+        <view class='view_two_right_content'>
+          <text class='view_two_text'>{{ordersGoodsInfoList[0].goodsName}}</text>
+          <text class='view_price'>¥{{ordersGoodsInfoList[0].sellingPrice}}</text>
+        </view>
+
+        <view class='view_two_right_content'>
+          <text class='view_two_type_text'>{{ordersGoodsInfoList[0].goodsProperty}}</text>
+          <text class='view_num'>x{{ordersGoodsInfoList[0].goodsSum}}</text>
+        </view>
+
+      </view>
+    </view>
+
+    <!-- 第三部分 -->
+    <view class='view_three'>
+      <view class='view_text_root'>
+        <text>合计:</text>
+        <text>¥{{orderRealPrice}}</text>
+        <text>(含运费)</text>
+      </view>
+
+    </view>
+
+
+    <!-- 第四部分 -->
+    <view class='view_four'>
+      <view wx:if="{{orderStatus == 0 && isUser == 0}}" class='view_four_root' bindtap='goPay' data-orderid="{{id}}">
+        <text class='view_buy'>立即支付</text>
+      </view>
+
+      <view wx:if="{{orderStatus != 0}}" class='view_four_root' data-spuid="{{ordersGoodsInfoList[0].goodsId}}" data-sputype="{{group}}" bindtap='goBuy'>
+        <text class='view_buy'>再次购买</text>
+      </view>
+
+      <view wx:if="{{1==0}}" class='view_four_root'>
+        <text class='view_del'>删除订单</text>
+      </view>
+
+
+    </view>
+  </view>
+</template>

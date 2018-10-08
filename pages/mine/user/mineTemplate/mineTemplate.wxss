@@ -1,0 +1,105 @@
+.container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background: #ededed;
+}
+
+.userinfo_root {
+  padding-left: 50rpx;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  background: black;
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.text {
+  font-size: 34rpx;
+  margin-top: 20rpx;
+}
+
+.userinfo-avatar {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+}
+
+.myinfo_item {
+  width: 100%;
+  height: 80rpx;
+  margin-top: 1rpx;
+  background: white;
+  display: flex;
+  padding-left: 20rpx;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.order_root {
+  font-size: 25rpx;
+  margin-top: 2rpx;
+  width: 100%;
+  height: 15%;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.order_item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.order_image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+#back_image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+
+.order_menu {
+  margin-top: 2rpx;
+  padding: 20rpx;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#view_change {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#view_change text {
+  color: white;
+  font-size: 25rpx;
+}
+
+.view_change_root {
+  margin-left: 50rpx;
+}
+
+.view_change_root text {
+  color: white;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}

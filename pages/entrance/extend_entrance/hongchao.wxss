@@ -1,0 +1,21 @@
+.quanji_logo{
+  display: block;
+  width:140rpx;
+  height: 140rpx;
+  margin:0 auto;
+  margin-top:250rpx;
+}
+.loading_title{
+  margin-top:20rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 36rpx;
+  text-align: center;
+}
+.loading_img{
+  display: block;
+  width:68rpx;
+  height: 16rpx;
+  margin:0 auto;
+  margin-top:84rpx;  
+}

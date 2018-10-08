@@ -1,0 +1,218 @@
+/* pages/personal_center/service_order_list/index.wxss */
+
+/* @import '/pages/store/business_platform/business_platform'; */
+
+/*服务订单列表  */
+
+page {
+  background: #F8FAFD;
+}
+
+.container {
+  padding-bottom: 20rpx;
+}
+
+.tab {
+  width: 100%;
+  height: 90rpx;
+  margin: 0 auto;
+  display: flex;
+  padding: 0 50rpx;
+  justify-content: space-between;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.tab view {
+  /* flex: 1; */
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #373c43;
+  width: auto;
+  margin: 0 50rpx;
+}
+
+.tab .active {
+  color: #373c43;
+  font-size: 30rpx;
+  font-weight: bold;
+  border-bottom: 6rpx solid #ff2063;
+}
+
+.container {
+  margin-top: 110rpx;
+}
+
+.list {
+  width: 100%;
+  /* height: 430rpx; */
+  background: #fff;
+  margin-bottom:20rpx;
+}
+
+.shop_name {
+  width: 690rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.shop_name_con {
+  font-size: 28rpx;
+  color: #373c43;
+  font-weight: bold;
+}
+
+.order_status {
+  color: #ff2063;
+  font-size: 24rpx;
+}
+
+.product_information_detail {
+  width: 100%;
+  display: flex;
+  background: #fafafa;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+}
+
+.product_information_detail>image {
+  display: block;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 5rpx;
+}
+
+.product_name_con {
+  width: 510rpx;
+}
+
+.product_name {
+  width: 100%;
+  line-height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 26rpx;
+}
+.buy_goods_information{
+  display: flex;
+  justify-content: space-between;
+  color:#777;
+  margin-top:15rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+}
+.buy_goods_size{
+  width:465rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  font-size: 24rpx;
+  color:#777;
+}
+.buy_goods_num{
+font-size: 24rpx;
+  color:#777;
+}
+.real_pay_money{
+  width: 100%;
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding:0 30rpx;
+  justify-content: flex-end;
+  border-bottom:1rpx solid #f0f0f0;
+}
+.real_pay_prompt{
+  font-size: 26rpx;
+}
+.real_pay_con>text:nth-child(1){
+  font-size: 26rpx;
+  margin-right:5rpx;
+}
+.real_pay_con>text:nth-child(2){
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.order_operate_box{
+  width:100%;
+  display: flex;
+  justify-content: flex-end;
+  padding:0 30rpx;
+  padding-bottom:15rpx;
+}
+.order_operate_add{
+   width:100%;
+  display: flex;
+  justify-content: space-between;
+  padding:0 30rpx;
+  padding-bottom:15rpx;
+}
+.order_operate_add>view{
+  display: flex;
+}
+.button_public{
+  display: block;
+  margin-top:15rpx;
+  width:160rpx;
+  height: 60rpx;
+  line-height: 56rpx;
+  text-align: center;
+  margin-left:15rpx;
+  font-size: 26rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  margin-right: 0;
+  padding:0;
+}
+.button_black{
+  border:2rpx solid #DCDCDC;
+  color:#373C43;
+}
+.button_red{
+  border:2rpx solid #FF2063;
+  color:#FF2B6B;
+}
+.gift_man{
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top:15rpx;
+  font-size: 26rpx;
+}
+.complete{
+  width:100%;
+  text-align: center;
+}
+.loading{
+  width:100%;
+  text-align: center;
+}
+/* 没有订单 */
+.empty_order{
+  width:100%;
+  height: auto;
+}
+.empty_order>image{
+  display: block;
+  width:136rpx;
+  height: 161rpx;
+  margin:0 auto;
+  margin-top:301rpx;
+}
+.prompt_con{
+  width:100%;
+  height: 33rpx;
+  line-height: 33rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color:#9A9A9A;
+}

@@ -1,0 +1,62 @@
+<import src="/pages/order/mineOrderTemplate/mineOrderTemplate.wxml" />
+
+<view class='view_box'>
+  <!-- <view class="swiper-tab"> -->
+  <view class="swiper-tab" scroll-left="{{scrollLeft}}">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">待付款</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">待发货</view>
+    <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">待收货</view>
+    <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">已完成</view>
+  </view>
+
+
+  <view class="scoll-h">
+    <include wx:if="{{isNull}}" src="/pages/order/orderNull/orderNull" />
+
+
+    <block wx:if="{{currentTab ==0}}" wx:for="{{orderInfoArray}}" wx:key="{{orderInfoArray}}" wx:for-item="orderInfoArray">
+      <template wx:if="{{isHave}}" is="mineOrder" data="{{...orderInfoArray,isPay,isUser}}" />
+    </block>
+
+    <block wx:if="{{currentTab ==1}}" wx:for="{{orderInfoArray}}"  wx:key="{{orderInfoArray}}" wx:for-item="orderInfoArray">
+      <template wx:if="{{isHave}}" is="mineOrder" data="{{...orderInfoArray,isPay,isUser}}" />
+    </block>
+
+    <block wx:if="{{currentTab ==2}}" wx:for="{{orderInfoArray}}"  wx:key="{{orderInfoArray}}" wx:for-item="orderInfoArray">
+      <template wx:if="{{isHave}}" is="mineOrder" data="{{...orderInfoArray,isPay,isUser}}" />
+    </block>
+
+
+    <block wx:if="{{currentTab ==3}}" wx:for="{{orderInfoArray}}"  wx:key="{{orderInfoArray}}" wx:for-item="orderInfoArray">
+      <template wx:if="{{isHave}}" is="mineOrder" data="{{...orderInfoArray,isPay,isUser}}" />
+    </block>
+
+    <block wx:if="{{currentTab ==4}}" wx:for="{{orderInfoArray}}"  wx:key="{{orderInfoArray}}" wx:for-item="orderInfoArray">
+      <template wx:if="{{isHave}}" is="mineOrder" data="{{...orderInfoArray,isPay,isUser}}" />
+    </block>
+
+    <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+    <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view>
+  </view>
+
+
+  <!--弹出框-->
+  <!-- <modal title="是否确认收货" hidden="{{hiddenModal}}" confirm-text="确认" cancel-text="取消" bindconfirm="listenerConfirm" bindcancel="listenerCancel">
+  </modal> -->
+
+
+  <view wx:if="{{showToast}}" class='bgShadow' bindtap='clickToastShadow'>
+    <view class='toastContainer'>
+      <view class='toastTop'>请确认您是否收到货物？</view>
+      <view class='toastBottom'> 
+        <view class='toastBottomLeft' bindtap='listenerConfirm'>确认收货</view>
+         <view class='toastBottomRight' bindtap='listenerCancel'>取消</view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+</view>

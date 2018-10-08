@@ -1,0 +1,47 @@
+@import "../../mine/returnSaleList/returnSaleCell/returnSaleCell.wxss";
+@import "/pages/shoper/yourLikerTemplate/yourLikerTemplate.wxss";
+@import "../../order/orderNull/orderNull.wxss";
+
+
+page {
+  width: 100%;
+  height: 100%;
+  background: #ededed;
+}
+
+.view_box {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+ 
+}
+
+.scoll-h {
+  height: 100%;
+  width: 100%;
+  background-color: #f2f2f2;
+
+}
+
+.loading{
+  padding: 10rpx;  
+  text-align: center;  
+}  
+.loading:before{  
+  display: inline-block;  
+  margin-right: 5rpx;  
+  vertical-align: middle;  
+  content: '';  
+  width: 40rpx;  
+  height: 40rpx;  
+  /* background: url("../../../images/mine/loading.png") no-repeat;   */
+  background-size: contain;  
+  animation: rotate 1s linear infinite;  
+}  
+.loading.complete:before{  
+  display: none;  
+}
+.you_may_like_list:nth-child(odd){
+  margin-left:20rpx;
+}
+

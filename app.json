@@ -1,0 +1,92 @@
+{
+  "pages": [
+    "pages/shoper/shoper_index_home/shoper_index_home",
+    "pages/entrance/welcome/welcome",
+    "pages/entrance/become_success/become_success",
+    "pages/mine/mineInfo/mine_info",
+    "pages/entrance/become_shopkeeper/become_shopkeeper",
+    "pages/mine/mineOrder/mineOrder",
+    "pages/mine/dialog/dialog",
+    "pages/mine/user/mineTemplate/mineTemplate",
+    "pages/mine/user/homeTemplate/homeTemplate",
+    "pages/shoper/shoper_index/shoper_index",
+    "pages/shoper/footer/footer",
+    "pages/shoper/shoper_detail/shoper_detail",
+    "pages/shoper/shoper_detail_group/shoper_detail_group",
+    "pages/shoper/product_list/product_list",
+    "pages/shoper/product_list_activity/product_list_activity",
+    "pages/shoper/specail_show/specail_show",
+    "pages/order/order_detail_wait_pay/order_detail_wait_pay",
+    "pages/order/order_detail_wait_send/order_detail_wait_send",
+    "pages/order/order_detail_has_send/order_detail_has_send",
+    "pages/order/order_detail_has_complete/order_detail_has_complete",
+    "pages/order/order_detail_has_close/order_detail_has_close",
+    "pages/mine/real_name_authentication/real_name_authentication",
+    "pages/order/coupon/userCoupon",
+    "pages/order/orderInfo/orderInfo",
+    "pages/common/commonQuestion/commonQuestion",
+    "pages/mine/mineCoupon/mineCoupon",
+    "pages/mine/shoperInfo/shoperInfo",
+    "pages/mine/drawCrash/drawCrash",
+    "pages/mine/drawCrashRecord/drawCrashRecord",
+    "pages/mine/drawCrashToast/drawCrashToast",
+    "pages/mine/cumulation_gains/cumulation_gains",
+    "pages/order/payStatusSuccess/payStatus",
+    "pages/order/payStatusFail/payStatusFail",
+    "pages/mine/shopDecoration/shopDecoration",
+    "pages/entrance/becomePay/becomePay",
+    "pages/shoper/shopDetailInfo/shopDetailName/shopDetailName",
+    "pages/mine/returnSaleList/returnSalelist",
+    "pages/mine/my_collection/my_collection",
+    "pages/mine/getSettingInfo/getSettingInfo",
+    "pages/mine/mineGroup/mineGroup",
+    "pages/shoper/swiper_special_list/swiper_special_list",
+    "pages/common/aboutQuanJi/aboutQuanJi",
+    "pages/shoper/special_module/special_module",
+    "pages/mine/drawCrashDetail/drawCrashDetail",
+    "pages/order/transportationInfo/transportationInfo",
+    "pages/mine/mineEarning/mineEarning",
+    "pages/mine/totalOrder/totalOrder",
+    "pages/order/my_gift/my_gift",
+    "pages/order/gift_order_detail/gift_order_detail",
+    "pages/gift/giftIntroduce/giftIntroduce",
+    "pages/order/gift_order_buyers/gift_order_buyers",
+    "pages/gift/gift_pay/gift_pay",
+    "pages/gift/receive_gift/receive_gift",
+    "pages/gift/gift_detail/gift_detail",
+    "pages/gift/giftCard/giftCard",
+    "pages/gift/getGiftPacket/getGiftPacket",
+     "pages/gift/giftCardStatus/giftCardStatus",
+     "pages/entrance/extend_entrance/hongchao",
+     "pages/gift/gift_receive_list/gift_receive_list"
+  ],
+  "window": {
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "圈集小店",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#f00",
+    "color": "#909090",
+    "list": [
+      {
+        "selectedIconPath": "images/common/home_select.png",
+        "iconPath": "images/common/home_normal.png",
+        "pagePath": "pages/shoper/shoper_index_home/shoper_index_home",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/common/mine_select.png",
+        "iconPath": "images/common/mine_normal.png",
+        "pagePath": "pages/mine/mineInfo/mine_info",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

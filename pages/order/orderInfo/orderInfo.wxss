@@ -1,0 +1,396 @@
+page {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(242, 242, 242);
+}
+
+view {
+  font-size: 24rpx;
+}
+
+/* 联系人信息  */
+
+.consigneeContainer {
+  width: 100%;
+  background-color: white;
+  /* position: relative; */
+  height: auto;
+  overflow: hidden;
+}
+
+.consigneeTopImage {
+  width: 100%;
+  height: 160rpx;
+  display: block;
+}
+
+/* .consigneeEmpty {
+  width: 100%;
+  height: 112rpx;
+  background-color: white;
+} */
+
+.consigneeInfo {
+  /* position: absolute;
+  top: 102rpx;
+  left: 40rpx; */
+  width: 670rpx;
+  /* height: 150rpx; */
+  background-color: white;
+  border-radius: 16rpx;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin:0 auto;
+  margin-top:-58rpx;
+  overflow: hidden;
+  margin-bottom:20rpx;
+  min-height: 120rpx; 
+}
+
+
+.topInfo {
+  margin: 25rpx 30rpx;
+  height: 26rpx;
+}
+
+.topPositionImage {
+  float: left;
+  width: 18rpx;
+  height: 26rpx;
+}
+
+.contact {
+  float: left;
+  height: 26rpx;
+  margin-left: 17rpx;
+   font-weight: bold;
+  font-size: 28rpx;
+  line-height: 25rpx;
+}
+
+.arrow-image {
+  float: right;
+  height: 24rpx;
+  width: 14rpx;
+  display: block;
+}
+
+.default {
+  float: left;
+  border: 1px solid red;
+  border-radius: 2rpx;
+  color: red;
+  font-size: 18rpx;
+  width: 60rpx;
+  height: 32rpx;
+  text-align: center;
+  line-height: 28rpx;
+}
+
+.bottomInfo {
+  margin: 0rpx 62rpx;
+  font-size: 20rpx;
+  color: #333;
+}
+
+.address {
+  float: left;
+  /* width: 60rpx; */
+  line-height: 35rpx;
+  text-align: left;
+  height: auto;
+}
+
+.addressInfo {
+  float: left;
+  line-height: 35rpx;
+  text-align: left;
+  width: 432rpx;
+  padding-bottom:15rpx;
+}
+
+/* 订单信息 */
+
+.orderContainer {
+  width: 100%;
+  height: 220rpx;
+  background-color: white;
+  overflow: hidden;
+}
+
+.order-left {
+  float: left;
+  width: 120rpx;
+  height: 120rpx;
+  display: block;
+  padding-left: 40rpx;
+  padding-top: 40rpx;
+  border-radius: 4rpx;
+}
+
+.order-middle {
+  float: left;
+  width: 432rpx;
+  height: 220rpx;
+  padding: 30rpx 0rpx;
+  margin-left: 26rpx;
+}
+
+.order-middle > view:nth-child(1) {
+  width: 412rpx;
+  /* height: 60rpx; */
+  line-height: 30rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.productName {
+  font-size: 12px;
+  color: #333;
+  height: 62rpx;
+  text-align: left;
+}
+
+.color-size {
+  color: #cac9ce;
+  font-size: 12px;
+  height: 23rpx;
+  text-align: left;
+  margin-top: 35rpx;
+}
+
+.order-right {
+  float: right;
+  width: 130rpx;
+  height: 220rpx;
+  padding: 36rpx 0rpx;
+}
+
+.actual-price {
+  color: #333;
+  height: 19rpx;
+  line-height: 19rpx;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.actual-number {
+  font-size: 24rpx;
+  height: 19rpx;
+  color: #cac9ce;
+  line-height: 19rpx;
+  text-align: center;
+  margin-top: 78rpx;
+}
+
+/* 价格信息 */
+
+.priceContainer {
+  width: 100%;
+  /* height: 225rpx; */
+  margin-top: 20rpx;
+  background-color: white;
+}
+
+.product-sum, .product-sale {
+  width: 100%;
+  height: 69rpx;
+  padding: 5rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.product-total {
+  width: 100%;
+  height: 98rpx;
+  padding: 22rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.product-middle-line {
+  padding: 0 20rpx;
+  width: 100%;
+  height: 2rpx;
+  background-color: #f2f2f2;
+}
+
+.sum-name, .sale-name, .total-name {
+  float: left;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.sum-name, .sale-name {
+  line-height: 69rpx;
+}
+
+.total-name {
+  height: 26rpx;
+}
+
+.sum-price, .sale-price {
+  float: right;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 69rpx;
+}
+
+.total-price {
+  float: right;
+  font-size: 28rpx;
+  color: #000000;
+  font-weight: bold;
+}
+
+/*  去付款 */
+
+.bottomContainer {
+  background-color: white;
+  width: 100%;
+  height: 98rpx;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+}
+
+.left-needPay {
+  float: left;
+  width: 290rpx;
+  height: 100%;
+  line-height: 98rpx;
+  text-align: center;
+  color: #ff2063;
+  font-size: 28rpx;
+}
+
+.right-gotobuy {
+  float: right;
+  width: 460rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  background-color: #ff2063;
+  color: white;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.pop_up_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.pop_up_box_small {
+  width: 500rpx;
+  height: 260rpx;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 200rpx;
+  border-radius: 5rpx;
+  overflow: hidden;
+}
+
+.pop_up_title {
+  width: 460rpx;
+  height: 80rpx;
+  line-height: 40rpx;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  font-size: 28rpx;
+}
+
+.comfirm_box {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 70rpx;
+}
+
+.comfirm_box button {
+  width: 50%;
+  height: 100%;
+  line-height: 60rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}
+
+.choose_address_before .topPositionImage {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  float: left;
+}
+
+.choose_address_before .default_address {
+  width: 76rpx;
+  height: 36rpx;
+  border: 1px solid #ff2063;
+  color: #ff2063;
+  font-size: 30rpx;
+  float: left;
+  border-radius: 8rpx;
+  line-height: 33rpx;
+  text-align: center;
+  margin-left: 11rpx;
+  margin-top: 2rpx;
+}
+
+.choose_address_before .contact {
+  margin-top: 7rpx;
+}
+.product-num{
+  width:100%;
+  height: 79rpx;
+  display: flex;
+  justify-content: space-between;
+  padding:0 20rpx;
+  line-height: 79rpx;
+}
+/*主容器*/
+
+.stepper {
+  /* margin-top: 20rpx; */
+  width: 260rpx;
+  height: 60rpx;
+  /*给主容器设一个边框*/
+  border: 1rpx solid #ccc;
+  border-radius: 3rpx;
+  float: right;
+  /* margin-right: 40rpx; */
+}
+
+/*加号和减号*/
+
+.stepper text {
+  width: 65rpx;
+  line-height: 60rpx;
+  text-align: center;
+  float: left;
+}
+
+/*数值*/
+
+.text_num_box {
+  width: 100%;
+  height: 50rpx;
+  margin-top: 20rpx;
+}
+
+.stepper input {
+  width: 120rpx;
+  height: 59rpx;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24rpx;
+  /*给中间的input设置左右边框即可*/
+  border-left: 1rpx solid #ccc;
+  border-right: 1rpx solid #ccc;
+}

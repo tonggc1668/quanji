@@ -1,0 +1,6 @@
+<template name="homeUserTopEntrance">
+  <view class='entrance-container'>
+    <image class='entrance-image' src='/images/homeUser/like.png'></image>
+    <text class='entrance-text'>入口</text>
+  </view>
+</template>

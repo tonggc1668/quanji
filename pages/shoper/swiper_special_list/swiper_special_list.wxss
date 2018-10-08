@@ -1,0 +1,45 @@
+@import "../product_list/product_list.wxss";
+.ticket_price_group {
+  font-size: 24rpx;
+  color: #fc0327;
+}
+
+.group_price {
+  float: left;
+  width: 92rpx;
+  height: 36rpx;
+  border: 1px solid #fc0327;
+  text-align: center;
+  line-height: 34rpx;
+  margin-right: 10rpx;
+  color: #fc0327;
+}
+
+.product_sale_num_gruop {
+  float: right;
+}
+
+
+.loading{  
+  padding: 10rpx;  
+  text-align: center;
+  background-color: #F7F7F7  
+}  
+.loading:before{  
+  display: inline-block;
+   background-color: #F7F7F7;  
+  margin-right: 5rpx;  
+  vertical-align: middle;  
+  content: '';  
+  width: 40rpx;  
+  height: 40rpx;  
+  /* background: url("../../../images/mine/loading.png") no-repeat;   */
+  background-size: contain;  
+  animation: rotate 1s linear infinite;  
+}  
+.loading.complete:before{  
+  display: none;  
+}
+.you_may_like_list:nth-child(odd){
+  margin-left:20rpx;
+}

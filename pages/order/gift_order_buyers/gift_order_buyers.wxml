@@ -1,0 +1,56 @@
+<!--pages/personal_center/service_order_list/index.wxml-->
+<!--服务订单列表  -->
+<view class='container'>
+  <view class='list'>
+    <view class='shop_name'>
+      <view class='shop_name_con'>圈集小店</view>
+    </view>
+    <view class='product_information_detail'>
+      <image src='/images/homeUser/benefit_one.png'></image>
+      <view class='product_name_con'>
+        <view class='product_name'>
+          2018年春季短袖短裙假两件条纹连衣裙衬衫 领韩版简约潮流 2018年春季短袖短裙假两件条纹连衣裙衬衫
+        </view>
+        <view class='buy_goods_information'>
+          <view class='buy_goods_size'>颜色：焦糖色 尺寸：S</view>
+          <view class='buy_goods_num'>1</view>
+        </view>
+      </view>
+    </view>
+    <view class='real_pay_money'>
+      <view class='real_pay_prompt'>实付款：</view>
+      <view class='real_pay_con'>
+        <text>¥</text>
+        <text>299.50</text>
+      </view>
+    </view>
+  </view>
+  <view class='order_status_box'>
+    <view class='order_status_list'>
+      <view class='order_status_left'>
+        订单编号
+      </view>
+      <view class='order_status_right'>
+        <view>165622886451584543</view>
+      </view>
+    </view>
+    <view class='order_status_list'>
+      <view class='order_status_left'>
+        下单时间
+      </view>
+      <view class='order_status_right'>
+        <view>2018-06-18 14:54:45</view>
+      </view>
+    </view>
+    <view class='order_status_list'>
+      <view class='order_status_left'>
+        支付时间
+      </view>
+      <view class='order_status_right'>
+        <view>2018-06-18 14:54:45</view>
+      </view>
+    </view>
+  </view>
+
+  <view bindtap='gotoGiftDetail' class='giftDetail'>礼物详情 ></view>
+</view>

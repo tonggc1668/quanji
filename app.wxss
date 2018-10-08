@@ -1,0 +1,42 @@
+/**app.wxss**/
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
+
+text{
+    font-family: 'PingFang SC','Roboto','Arial','Microsoft Yahei','simsun','arial','tahoma';
+    font-size:28rpx;
+    color:#333;
+} 
+
+view{
+  font-family:'PingFang SC','Roboto','Arial','Microsoft Yahei','simsun','arial','tahoma';  color: #333;
+  font-size:28rpx;
+  box-sizing: border-box;
+}
+/* 一行溢出... */
+.overflow_one{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* 两行溢出... */
+.overflow_two{
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  overflow:hidden;
+  -webkit-line-break:auto;
+  -webkit-box-orient:vertical;
+}
+.gradual_change{
+  background: -webkit-linear-gradient(left,#FA1E64,#FE8A47); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #FA1E64,#FE8A47); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #FA1E64,#FE8A47); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #FA1E64,#FE8A47); /* 标准的语法 */
+}

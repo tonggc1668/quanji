@@ -1,0 +1,157 @@
+.crashToastBG {
+  height: 100%;
+  width: 100%;
+  background-color: #f7f7f7;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.crashToast {
+  position: absolute;
+  width: 670rpx;
+  height: 670rpx;
+  top: 40rpx;
+  left: 40rpx;
+  border-radius: 8rpx;
+  background-color: #FFFFFF;
+}
+
+.toast-top-con {
+  width: 100%;
+  height: 148rpx;
+  background-color: #f1f1f1;
+}
+
+.toastTopLeft {
+  float: left;
+  height: 26rpx;
+  width: 90rpx;
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+  font: 28rpx;
+  color: #333;
+}
+
+.toastTopRight {
+  float: left;
+  height: 75rpx;
+  width: 330rpx;
+  margin-left: 60rpx;
+  margin-top: 40rpx;
+}
+
+.toastTopRightTitle {
+  height: 31rpx;
+  width: 150rpx;
+  color: #333;
+  font-size: 32rpx;
+}
+
+.toastTopRightDetail {
+  height: 21rpx;
+  width: 330rpx;
+  color: #b2b2b2;
+  font-size: 20rpx;
+  margin-top: 19rpx;
+}
+
+.toast-bottom {
+  background-color: white;
+  width: 100%;
+  height: 525rpx;
+}
+
+.bottom-title {
+  padding-top: 50rpx;
+  padding-left: 40rpx;
+  font-size: 28rpx;
+  color: #333;
+  height: 38rpx;
+  width: 180rpx;
+}
+
+.bottom-input-con {
+  height: 98rpx;
+  padding-left: 40rpx;
+  margin-top: 80rpx;
+}
+
+.input-unit {
+  float: left;
+  line-height: 98rpx;
+  font-size: 50rpx;
+}
+
+.input-num {
+  float: left;
+  height: 100%;
+  width: 500rpx;
+  margin-left: 20rpx;
+  font-size: 90rpx;
+  color: #333;
+  text-align: center;
+}
+
+.bottom-line {
+  background-color: #f2f2f2;
+  width: 610rpx;
+  height: 1rpx;
+  margin: 0 auto;
+}
+
+.toast-detail-con {
+  height: 33rpx;
+  padding-left: 40rpx;
+  margin-top: 36rpx;
+}
+
+.allmoney-number {
+  color: #B2B2B2;
+  font-size: 24rpx;
+}
+
+.allmoney-notice {
+  color: #51619D;
+  font-size: 24rpx;
+}
+
+.bottom-button {
+  height: 88rpx;
+  width: 610rpx;
+  margin: 60rpx auto;
+  text-align: center;
+  background-color: #FF2063;
+  border-radius: 8rpx;
+  color: white;
+  line-height: 88rpx;
+  font-size: 32rpx;
+}
+
+.buttonState-norml {
+  opacity: 0.5;
+}
+
+.buttonState-canClick {
+  opacity: 1;
+}
+
+.loading {
+  padding: 10rpx;
+  text-align: center;
+}
+
+.loading:before {
+  display: inline-block;
+  margin-right: 5rpx;
+  vertical-align: middle;
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  background-size: contain;
+  animation: rotate 1s linear infinite;
+}
+
+.loading.complete:before {
+  display: none;
+}

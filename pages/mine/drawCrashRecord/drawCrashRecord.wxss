@@ -1,0 +1,290 @@
+@import "../../mine/drawCrashRecordCell/drawCrashRecordCell.wxss";
+@import "/pages/shoper/yourLikerTemplate/yourLikerTemplate.wxss";
+@import "../../mine/drawCrashRecordNull/drawCrashRecordNull.wxss";
+
+
+.container {
+  position: relative;
+    width: 100%;
+  height: auto;
+  border-top: 1rpx solid #f2f2f2;
+  background: #f2f2f2;
+  overflow: hidden;
+}
+
+
+
+/* 提现金额 */
+
+.top-container {
+  width: 100%;
+  height: 160rpx;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  border-top: 1px solid #EAEAEA
+}
+.number_count_box{
+  width:100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.number-title {
+  font-size: 28rpx;
+  color: #333;
+  margin: 30rpx 20rpx;
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.number-count {
+  color: #FF2063;
+  font-size: 36rpx;
+  margin-left: 20rpx;
+}
+
+.number-btn {
+  display: block;
+  width: 130rpx;
+  height: 48rpx;
+  font-size: 24rpx;
+  border-radius: 8rpx;
+  border: 1px solid #B2B2B2;
+  line-height: 48rpx;
+  text-align: center;
+  box-sizing: border-box;
+  margin:0;
+  margin-right:25rpx;
+}
+
+.number-btn::after {
+  border: none
+}
+
+
+/* 提现条件  */
+
+.middle-container {
+  width: 100%;
+  height: 430rpx;
+  background-color: white;
+  margin-top: 20rpx;
+}
+
+.condition-title, .record-title {
+  width: 100%;
+  height: 88rpx;
+  color: #333;
+  font-size: 28rpx;
+  line-height: 88rpx;
+  padding-left: 20rpx;
+}
+
+.condition-line {
+  height: 1rpx;
+  background-color: #f2f2f2;
+  margin: 0rpx 20rpx;
+}
+
+.condition-first, .condition-second, .condition-third, .condition-fouth,.condition-five{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  color: #333;
+  font-size: 28rpx;
+  height: 40rpx;
+}
+
+.condition-first-title {
+  display: block;
+  float: left;
+}
+
+.condition-hadConfirm {
+  display: block;
+  float: left;
+  margin-left: 15rpx;
+  color: #5a6fff;
+  height: 40rpx;
+  width: 200rpx;
+  padding: 0;
+  font-size: 28rpx;
+  background-color: white;
+  text-align: left;
+  line-height: 40rpx;
+}
+
+.condition-hadConfirm::after {
+  border: 0;
+}
+/* 提现记录  */
+
+.bottom-container {
+  width: 100%;
+  background-color: white;
+  margin-top: 20rpx;
+}
+
+/* .record-title {
+  width: 100%;
+  height: 88rpx;
+  color: #333;
+  font-size: 28rpx;
+  line-height: 88rpx;
+  padding-left: 20rpx;
+} */
+
+/* .record-line {
+  height: 1rpx;
+  background-color: #f2f2f2;
+  margin: 0rpx 20rpx;
+} */
+
+.crashToastBG {
+  height: 1334rpx;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.crashToast {
+  position: absolute;
+  width: 690rpx;
+  height: 614rpx;
+  top: 191rpx;
+  left: 30rpx;
+  border-radius: 8rpx;
+  background-color: #d9d9d9;
+}
+
+.toast-top-con {
+  width: 100%;
+  height: 88rpx;
+  background-color: white;
+  opacity: 0.6;
+}
+
+.toast-top {
+  float: left;
+  width: 600rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 40rpx;
+}
+
+.toast-back {
+  float: left;
+  width: 30rpx;
+  height: 30rpx;
+  display: block;
+  margin-left: 30rpx;
+  margin-top: 29rpx;
+}
+
+.toast-bottom {
+  background-color: white;
+  width: 100%;
+  height: 525rpx;
+}
+
+.bottom-title {
+  padding-top: 50rpx;
+  padding-left: 40rpx;
+  font-size: 28rpx;
+  color: #333;
+  height: 38rpx;
+  width: 180rpx;
+}
+
+.bottom-input-con {
+  height: 98rpx;
+  padding-left: 40rpx;
+  margin-top: 80rpx;
+}
+
+.input-unit {
+  float: left;
+  line-height: 98rpx;
+  font-size: 50rpx;
+}
+
+.input-num {
+  float: left;
+  height: 100%;
+  width: 500rpx;
+  margin-left: 20rpx;
+  font-size: 90rpx;
+  color: #333;
+  text-align: center;
+}
+
+.bottom-line {
+  background-color: #f2f2f2;
+  width: 610rpx;
+  height: 1rpx;
+  margin: 0 auto;
+}
+
+.toast-detail-con {
+  height: 33rpx;
+  padding-left: 40rpx;
+  margin-top: 36rpx;
+}
+
+.allmoney-number {
+  color: #737373;
+  font-size: 24rpx;
+}
+
+.allmoney-notice {
+  color: #5A6FFF;
+  font-size: 24rpx;
+}
+
+
+
+.bottom-button {
+  height: 88rpx;
+  width: 610rpx;
+  margin: 60rpx auto;
+  text-align: center;
+  background-color: #fc0327;
+  border-radius: 8rpx;
+  color: white;
+  line-height: 88rpx;
+  font-size: 32rpx;
+}
+
+.buttonState-norml {
+opacity: 0.5;
+}
+
+.buttonState-canClick {
+opacity: 1;
+}
+
+
+
+
+ .loading{  
+  padding: 10rpx;  
+  text-align: center;  
+}  
+.loading:before{  
+  display: inline-block;  
+  margin-right: 5rpx;  
+  vertical-align: middle;  
+  content: '';  
+  width: 40rpx;  
+  height: 40rpx;  
+  background-size: contain;  
+  animation: rotate 1s linear infinite;  
+}  
+.loading.complete:before{  
+  display: none;  
+} 
+

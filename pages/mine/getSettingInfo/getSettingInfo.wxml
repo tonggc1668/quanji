@@ -1,0 +1,16 @@
+<view class='view_null_root'>
+  <view class='bg' style="background-image:url('https://items-1255492638.cos.ap-guangzhou.myqcloud.com/6432751c529c4730bbb0466fd438405e.png'); background-size:cover">
+
+  </view>
+
+  <button open-type="getUserInfo" bindgetuserinfo="userInfoHandler" class='view_go'>微信授权</button>
+
+  <text class='text_small'>授权后方可继续操作</text>
+
+
+  <view bindtap="view_back" class='view_back'>返回首页</view>
+
+
+  <text class='text_compang'>杭州圈集信息技术有限公司</text>
+  <text class='text_jieshao'>Hangzhou WeMarts Information Technology Co., Ltd.</text>
+</view>

@@ -1,0 +1,51 @@
+<view class='container'>
+  <!-- 优惠券  -->
+  <view  wx:if="{{isHide}}" class='top-container' style="background-image:url('https://shq-1256131430.cos.ap-guangzhou.myqcloud.com/d61e0fc5ec954082812ceda04476ea2e.png');background-size:cover" >
+
+<view wx:if="{{isHide}}" class='top-left'>
+  <view class='left-title' >你朋友「{{username}}」送给你的券 </view>
+  <view class='left-price'> ¥{{ticketPrice}}</view>
+  <!-- <view class='left-line'></view> -->
+  <view class='left-limit'>限店铺限商品</view> 
+</view>
+
+<view wx:if="{{isHide}}" bindtap='saveCoupon'   class='top-right {{couponStatusBG}}'>{{shareBtnText}}</view>
+  </view>
+
+  <!-- 商品详情  -->
+  <view class='middle-container'>
+    <image class='shopdetail-icon' src='{{imageIcon}}'></image>
+
+    <view class='shopdetail-info'>
+      <view class='info-title'>{{goodsName}}</view>
+      <view wx:if="{{showSale}}" class='info-type'>券后价</view>
+      <view class='price-container'>
+        <view class='true-price'>¥{{couponPrice}}</view>
+        <view class='origin-price'>¥{{goodsPrice}}</view>
+        <view class='goto-productDetail' bindtap='gotoshoperDetail'>查看商品详情</view>
+      </view>
+    </view> -
+
+  </view>
+
+  <!-- 活动说明  -->
+  <view class='bottom-container'>
+    <view class='title-container'>
+       <image class='point-image' src='/images/common/quadrilateral.png'></image>
+    <view class='title-word'> 商品说明</view>
+    <image class='point-image'  src='/images/common/quadrilateral.png'></image> 
+    </view>
+
+    <view class='activity-description'> • 点击“查看详情”按钮，即可看到商品更多信息。
+    </view>
+
+    <view class='activity-description'>• 先到先得，售完为止 </view>
+
+    <view class='activity-description'>• 因商品不足购买不了我们深感抱歉,请及时选中下单。</view>
+
+    <view class='activity-description'>• 进入首页,选择更多适合您的商品,为您服务,圈集小店。
+    </view>
+
+  </view>
+
+</view>

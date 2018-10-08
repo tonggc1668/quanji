@@ -1,0 +1,15 @@
+<template name="yourLike">
+
+  <view class='you_may_like_list' style="display: block;" bindtap='jump_detail' data-productId="{{id}}">
+    <image src='{{mainImgUrl}}'></image>
+    <view class='you_may_like_name'>{{goodsName}}</view>
+    <view class='price_and_sale'>
+      <view class='price_box'>
+        <text class='now_price'>¥{{goodsPrice}}</text>
+        <text class='prev_price'>¥{{marketPrice}}</text>
+      </view>
+      <view class='have_sale'>已售{{salesVolume}}</view>
+    </view>
+  </view>
+
+</template>

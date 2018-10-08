@@ -1,0 +1,23 @@
+<view class="container">
+
+<!-- 支付状态  -->
+<view class='top-status'>
+<image class='status-icon' src='/images/buyFlow/payFail.png'></image>
+<text class='status-title'>支付失败</text>
+</view>
+
+<!-- 支付信息  -->
+<view class='middle-info'>
+<view class='info-shop'>圈集小店</view>
+<view class='info-money'>¥{{wxRealPrice}}</view>
+</view>
+
+<!-- 支付跳转 -->
+<view class='bottom-jump'>
+<!-- <view bindtap='jumpToService' class='jump-service'>联系客服</view> -->
+<button  open-type="contact" class='jump-service' >联系客服</button>
+<view bindtap='jumpToHome' class='jump-home'>回首页</view>
+</view>
+
+
+</view>

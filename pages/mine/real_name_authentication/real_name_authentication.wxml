@@ -1,0 +1,54 @@
+<view class="real_name_confirm">
+  <view class='real_name_confirm_box'>
+    <view class='real_name_confirm_title'>
+      <image src='/images/common/comfirm_money_safety.png' class='left'></image>
+      <text>为确保资金安全，请先进行实名认证</text>
+    </view>
+    <view class='check_box'>
+      <view class='real_name_box'>
+        <view class='real_name_title'>
+          真实姓名
+        </view>
+        <view class='real_name_input'>
+          <image src='/images/common/real_name.png'></image>
+          <input placeholder="请输入真实姓名(必填)" bindblur="bind_name" maxlength="{{20}}" />
+        </view>
+      </view>
+      <view class='real_name_box'>
+        <view class='real_name_title'>
+          身份证号
+        </view>
+        <view class='real_name_input'>
+          <image src='/images/common/cart_code.png'></image>
+          <input placeholder="请输入18位身份证号(必填)" bindblur="bind_card" maxlength="{{18}}" />
+        </view>
+        <view class='text_prompt' wx:if="{{cart_show}}">请填写正确的18位身份证号码</view>
+      </view>
+      <view class='real_name_box'>
+        <view class='real_name_title'>
+          手机号
+        </view>
+        <view class='real_name_input'>
+          <image src='/images/common/phone_gray.png'></image>
+          <input placeholder="请输入正确的手机号(必填)" bindblur="bind_phone" bindinput="bind_phone_status" maxlength="{{11}}" />
+        </view>
+        <view class='text_prompt' wx:if="{{phone_show}}">请填写格式正确的手机号</view>
+      </view>
+      <view class='real_name_box'>
+        <view class='real_name_title'>
+          验证码
+        </view>
+        <view class='real_name_input'>
+          <view class='real_name_input_box'>
+            <image src='/images/common/safety_code.png'></image>
+            <input placeholder="请输入正确的验证码(必填)" bindblur="bind_code" maxlength="{{6}}" />
+          </view>
+          <button class='{{send_code}}' bindtap='send_code' disabled="{{disabled}}">{{getmsg}}</button>
+        </view>
+      </view>
+      <view class='next_step' bindtap='jump_draw_crash'>
+        <button>实名认证后可提现</button>
+      </view>
+    </view>
+  </view>
+</view>

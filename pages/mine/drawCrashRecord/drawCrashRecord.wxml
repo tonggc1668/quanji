@@ -1,0 +1,20 @@
+<import src='../drawCrashRecordCell/drawCrashRecordCell.wxml' />
+
+<view class='container'>
+  <!-- 提现记录 -->
+  <view wx:if="false" class='bottom-container'>
+    <!-- <view class='record-title'>提现记录</view> -->
+    <include wx:if="{{hasDrawCrashRecord}}" src="/pages/mine/drawCrashRecordNull/drawCrashRecordNull" />
+
+    <block wx:for="{{drawCrashList}}" wx:for-item="drawCrashList">
+      <view catchtap='cellDetailClick' data-postid='{{item.postid}}'>
+        <template is='drawCrashRecordCell' data="{{...drawCrashList}}" />
+      </view>
+    </block>
+
+    <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+    <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view>
+  </view>
+
+
+</view>

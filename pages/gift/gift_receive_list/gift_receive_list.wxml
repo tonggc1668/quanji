@@ -1,0 +1,56 @@
+<view class="gift_receive_box">
+  <view class='gift_title_box'>
+    <view class='gift_title_img' style=" background: url('https://items-1255492638.cos.ap-guangzhou.myqcloud.com/2316192d90b44609802ef09f9e245fbe.png') no-repeat;background-size:cover;"></view>
+    <image src='{{goodsInfo.goodsImg}}'></image>
+    <view class='product_name overflow_one'>
+      {{goodsInfo.goodsName}}
+    </view>
+    <view class='gift_prompt' wx:if="{{info_detail.isFail==1}}">超时24小时且人数不足，未成功开奖</view>
+    <view class='gift_prompt' wx:elif="{{ordersGiftInfo.giftType==1}}">{{ordersGiftInfo.deadline}}开奖</view>
+    <view class='gift_prompt' wx:elif="{{ordersGiftInfo.giftType==2}}">满{{ordersGiftInfo.participantsNumber}}开奖，当前{{ordersGiftInfo.currentNumber}}人</view>
+
+  </view>
+  <view class='person_box'>
+    <view class='person_list' wx:for="{{userList}}" wx:key="{{userList}}">
+      <image src="{{item.userHeadImgSrc}}" class='userHeadImgSrc'></image>
+      <view class='is_onesele' wx:if="{{item.isSelf==1}}">
+        <image src='/images/buyFlow/has_prize.png' wx:if="{{item.status==1}}"></image>
+        <image src='/images/buyFlow/no_prize.png' wx:elif="{{item.status==2}}"></image>
+      </view>
+      <view class='participant_box'>
+        <view class='participant_name'>{{item.userNickName}}</view>
+        <view class='receive_time'>{{item.gmtCreate}}</view>
+      </view>
+      <view wx:if="{{info_detail.ordersGiftInfoStatus==3}}">
+        <view wx:if="{{item.isSelf==1}}">
+          <view wx:if="{{info_detail.isAccept==0}}">
+            <view class='operate_box' wx:if="{{item.status==1}}">
+              <view class='go_to_receive gradual_change' bindtap='go_to_receive'>去领奖</view>
+            </view>
+            <view class='operate_box' wx:elif="{{item.status==2}}">
+              <view class='go_to_ticket gradual_change' bindtap='go_to_ticket'>领取优惠券</view>
+            </view>
+            <view wx:else>
+              <view class='gift_status'>已过期</view>
+            </view>
+          </view>
+          <view wx:else>
+            <view class='gift_status'>已领取</view>
+          </view>
+        </view>
+        <view wx:else>
+          <view class='gift_status' wx:if="{{item.status==0}}">未开奖</view>
+          <view class='gift_status' wx:elif="{{item.status==1}}">中奖</view>
+          <view class='gift_status' wx:elif="{{item.status==4}}">已过期</view>
+          <view class='gift_status' wx:else>未中奖</view>
+        </view>
+      </view>
+      <view wx:else>
+        <view class='gift_status' wx:if="{{item.status==0}}">未开奖</view>
+        <view class='gift_status' wx:elif="{{item.status==1}}">中奖</view>
+        <view class='gift_status' wx:elif="{{item.status==4}}">已过期</view>
+        <view class='gift_status' wx:else>未中奖</view>
+      </view>
+    </view>
+  </view>
+</view>

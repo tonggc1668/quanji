@@ -1,0 +1,57 @@
+<import src='../drawCrashRecordCell/drawCrashRecordCell.wxml' />
+
+<view class='container'>
+
+  <view class='topNameInfoCon'>
+    <view class='nameInfoIntroduce'>提现至微信账号</view>
+    <view class='nameInfoNickName'>{{nickName}}</view>
+  </view>
+
+
+  <!-- 提现金额 -->
+  <!-- old version jump to   new page -->
+  <!-- <view class='top-container'>
+    <view class='number-title'>可提现 (元)</view>
+    <view class='number_count_box'>
+      <view class='number-count'>{{drawCrashCount}}</view>
+      <button style="background-color:{{goCrashBtnStatus}};color: {{goCrashBtnColor}} ;opacity:1.0;" type="default" bindtap='gotoDrawCrash' class="number-btn {{goCrashBtnBorder}}" disabled="{{goCrashBtnStatusDisable}}">提现</button>
+    </view>
+  </view> -->
+
+   <view class='top-container'>
+    <view class='number-title'>提现金额</view>
+        <view class='bottom-input-con'>
+        <view class='input-unit'>¥</view>
+        <input bindinput='dealWithInput' class='input-num' value="{{inputText}}" type='digit'></input>
+      </view>
+
+      <view class='drawCrashInfoCrash'>
+            <view class='drawCrashInfo'>可提现金额:{{drawCrashCount}}元</view>
+            <view class='drawCrashAll' bindtap='drawCrashAlClick'>全部提现</view>
+      </view>
+  </view> 
+
+
+  <!-- 提现条件  -->
+  <view class='middle-container'>
+    <view class='condition-title'>提现条件</view>
+    <view class='condition-first'>
+      <text class='condition-first-title'> 1. 完成实名认证 </text>
+
+      <button type="button" class='condition-hadConfirm {{confirmBtnStyle}}' bindtap="{{comfirmFunction}}">{{confirmVerifyStatus}}</button>
+    </view>
+
+    <view class='condition-second'>2.收益金额满100元才可提现</view>
+    <view class='condition-third'>3.提现时间每月1-3号、16-18号</view>
+    <view class='condition-fouth'>4.提现到账时间3-5个工作日，节假日顺延</view>
+    <view class='condition-five'>5.提现金额会直接打入您的【微信钱包-零钱】中</view>
+  </view>
+
+
+  <view class='bottomCon'>
+    <view class='bottomRecord' bindtap='drawCrashRecord'>提现记录</view>
+    <!-- <view class='bottomDrawCrash' bindtap='drawCrashBtnClick' disabled="{{drawCrashBtnDisable}}">立即提现</view> -->
+     <button type="button" class='bottomDrawCrash' catchtap="drawCrashBtnClick" disabled="{{drawCrashBtnDisable}}">立即提现</button>
+  </view>
+
+</view>

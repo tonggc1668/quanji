@@ -1,0 +1,160 @@
+<import src="/pages/shoper/yourLikerTemplate/yourLikerTemplate.wxml" />
+
+<!-- 买家个人中心 -->
+<view class='container' id='{{isShowUser}}'>
+
+  <!-- 个人信息 -->
+  <view class='userinfo_root'>
+    <view class='userInfo_title'>
+      <view class='userIofo_title_box'>
+        <!-- <image wx:if="{{isShowTop}}" src='/images/mine/icon_seller_title.png' class='userInfo_title_icon'></image> -->
+        <image class='userinfo-avatar' src="{{avatarUrl}}" background-size="cover"></image>
+      </view>
+      <view class='change_title_icon_box'>
+        <view class='text'>{{nickName}}</view>
+        <button class='change_title_icon' open-type="getUserInfo" bindgetuserinfo="userInfoHandler">
+          更新资料
+        </button>
+      </view>
+    </view>
+
+    <view class='order_change' bindtap='onChangeShoper'>
+      <!-- <image hidden='{{isShowTop}}' src='../../../images/mine/huangguan.png' class='imgae_huangguan'></image> -->
+
+      <view class='text_become'>{{changeInfo}}</view>
+    </view>
+
+  </view>
+
+
+
+
+  <!-- 我的订单 -->
+  <view class='order_menu_order' bindtap='myOrder'>
+    <text class='text_mine_order'>我的订单</text>
+    <view class='text_all_order'>
+      <text class='text_all_order_item'>查看更多</text>
+      <image src='../../../images/mine/mineBack.png' id='back_image'></image>
+    </view>
+  </view>
+
+
+  <!-- 订单分类 -->
+  <view class='order_root'>
+    <view class='order_item' bindtap='waitPay'>
+      <image src='../../../images/mine/waitpay.png' class='order_image1'></image>
+      <text class='text_order_stutas'>待付款</text>
+      <text wx:if="{{orderNumNotPay != 0}}" class='orderCount'>{{orderNumNotPay}}</text>
+    </view>
+
+    <view class='order_item' bindtap='waitSend'>
+      <image src='../../../images/mine/waitsend.png' class='order_image2'></image>
+      <text class='text_order_stutas'>待发货</text>
+      <text wx:if="{{orderNumNotSend != 0}}" class='orderCount'>{{orderNumNotSend}}</text>
+    </view>
+
+    <view class='order_item' bindtap='waitGet'>
+      <image src='../../../images/mine/waitget.png' class='order_image3'></image>
+      <text class='text_order_stutas'>待收货</text>
+      <text wx:if="{{orderNumNotRecive != 0}}" class='orderCount'>{{orderNumNotRecive}}</text>
+    </view>
+
+
+
+    <view bindtap='jumpToReturnSaleList' class='order_item'>
+      <image src='../../../images/mine/sale.png' class='order_image4'></image>
+      <text class='text_order_stutas'>售后中</text>
+    </view>
+  </view>
+
+
+
+  <!-- 礼物清单 & 我的优惠券  -->
+  <view class='collectionAndCouponContaine' catchtap='jump_to_my_gift'>
+    <view class='add_box'>
+      <view class='collectionCon'>
+        <view class='collectionInfoCon'>
+          <view class='collectionName'>礼物清单</view>
+          <view class='collectionDetail'>收礼送礼清单</view>
+        </view>
+        <image class='collectionImage' src='../../../images/mine/collectionIconNew.png'></image>
+      </view>
+
+
+      <view class='couponCon' catchtap='mineCoupon'>
+        <view class='collectionInfoCon'>
+          <view class='collectionName'>优惠券</view>
+          <view class='collectionDetail'>{{couponListNum}}张优惠券可用</view>
+        </view>
+        <image class='collectionImage' src='../../../images/mine/couonIconNew.png'></image>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 我的拼团 -->
+  <!-- <view class='order_menu' bindtap='mineGroup'>
+
+      <view class='order_bottom_item'>
+        <image src='../../../images/mine/pintuan.png' class='order_image'></image>
+        <text class='text_top'>我的拼团</text>
+      </view>
+
+      <image src='../../../images/mine/back.png' id='back_image'></image>
+
+    </view> -->
+
+
+  <view class='bottomFixedCon'>
+    <view class='order_menu orderMenuCommonQuestion' catchtap='jump_to_collection'>
+      <view class='order_bottom_item'>
+        <image src='../../../images/mine/add_collect_icon.png' class='order_image'></image>
+        <text class='text_top'>收藏夹</text>
+      </view>
+      <image src='../../../images/mine/mineBack.png' id='back_image'></image>
+    </view>
+    <!-- 常见问题 -->
+    <view class='order_menu' catchtap='goToCommonQuestion'>
+      <view class='order_bottom_item'>
+        <image src='../../../images/mine/question.png' class='order_image'></image>
+        <text class='text_top'>常见问题</text>
+      </view>
+      <image src='../../../images/mine/mineBack.png' id='back_image'></image>
+    </view>
+  </view>
+  <view class='bottomFixedCon add_bottomFixedCon'>
+    <!-- 关于圈集小店 -->
+    <view class='order_menu' catchtap='goToCompanyIntro'>
+      <view class='order_bottom_item'>
+        <image src='../../../images/mine/aboutNew.png' class='order_image'></image>
+        <text class='text_top'>关于圈集</text>
+      </view>
+      <image src='../../../images/mine/mineBack.png' id='back_image'></image>
+    </view>
+
+    <!-- 联系客服 -->
+    <view class='order_menu'>
+      <view class='order_bottom_item'>
+        <image src='../../../images/mine/contacter.png' class='order_image'></image>
+        <view class='contact-btn-con'>
+          <button id='contact-btn' open-type='contact'>联系客服</button>
+        </view>
+      </view>
+      <image src='../../../images/mine/mineBack.png' id='back_image'></image>
+    </view>
+
+  </view>
+</view>
+
+
+<view wx:if="{{isSetting}}" class='view_null_root'>
+  <view class='bg' style="background-image:url('https://items-1255492638.cos.ap-guangzhou.myqcloud.com/6432751c529c4730bbb0466fd438405e.png'); background-size:cover">
+
+  </view>
+  <button open-type="getUserInfo" bindgetuserinfo="userInfoHandler" class='view_go'>微信授权</button>
+
+  <text class='text_small'>授权后方可继续操作</text>
+  <view bindtap="view_back" class='view_back'>返回首页</view>
+  <text class='text_compang'>杭州圈集信息技术有限公司</text>
+  <text class='text_jieshao'>Hangzhou WeMarts Information Technology Co., Ltd.</text>
+</view>
